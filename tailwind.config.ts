@@ -1,3 +1,5 @@
+
+import { Ultra } from "next/font/google";
 import type { Config } from "tailwindcss";
 const {
   default: flattenColorPalette,
@@ -29,9 +31,13 @@ const config: Config = {
           },
         },
       },
+      fontFamily:{
+        "ultra" : ["Ultra"],
+      }
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [addVariablesForColors,
+            require('tailwindcss-animated') ],
 };
 
 function addVariablesForColors({ addBase, theme }: any) {

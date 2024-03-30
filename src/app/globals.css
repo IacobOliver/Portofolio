@@ -2,19 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-.loader{
+.loader {
   height: calc(100vh + 200px);
   width: 100%;
   position: fixed;
 
 }
 
-.loader svg{
+.loader svg {
   height: 100%;
   width: 100%;
 }
 
-.loader svg path{
+.loader svg path {
   stroke: black;
   stroke-width: 1px;
+}
+
+.gradientText {
+  background: linear-gradient(49deg, rgb(188, 176, 250) 13%, rgb(160, 117, 252) 36%, rgb(109, 149, 241) 100%);
+  -webkit-background-clip : text;
+  color : transparent;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+body {
+  scrollbar-width: none; /* Firefox */
 }
