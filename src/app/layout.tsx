@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Ultra } from "next/font/google";
 import "./globals.css";
 
+// const ultra = Ultra({
+//   subsets: ['latin'],
+//   variable : '--font-sans'
 
+// })
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-ultra font-bold">{children}</body>
+      <body className="">{children}</body>
     </html>
   );
 }

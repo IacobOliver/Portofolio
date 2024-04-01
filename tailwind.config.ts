@@ -1,9 +1,11 @@
 
-import { Ultra } from "next/font/google";
 import type { Config } from "tailwindcss";
+import { Ultra , Montserrat} from "next/font/google";
+
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
+
 
 const config: Config = {
   content: [
@@ -32,7 +34,8 @@ const config: Config = {
         },
       },
       fontFamily:{
-        "ultra" : ["Ultra"],
+        ultra : ["Ultra"],
+        montserrat : ["Montserrat"]
       }
     },
   },
