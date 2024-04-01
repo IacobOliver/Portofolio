@@ -5,7 +5,7 @@ import { AuroraBackground } from "./_components/AuroraBackground";
 import SlideLoading from "./_components/SlideLoading";
 import Header from "./_components/Header";
 
-import { Ultra, Lora } from 'next/font/google'
+import { Ultra, Lora, Oswald } from 'next/font/google'
 
 const lora = Lora({
   weight: '600',
@@ -14,6 +14,10 @@ const lora = Lora({
 
 const ultra = Ultra({
   weight: '400',
+  subsets: ['latin'],
+})
+const oswald = Oswald({
+  weight: '600',
   subsets: ['latin'],
 })
 
@@ -43,16 +47,15 @@ export default function Home() {
                 <Header />
 
                 <div id="mainContainer" className="grid grid-cols-3 w-full h-full p-10 gap-20 z-20">
-                <div id="pfpContainer" className=" h-fit w-fit">
-                    <img className="w-[30rem]" src="/images/pfpCut.png"></img>
-                      
+                <div id="pfpContainer" className=" h-fit w-fit bg-[#0f0718] bg-opacity-20 rounded-br-[400px] rounded-tl-[400px]  rounded-tr-[70px]  rounded-bl-[300px]">
+                    <img className="w-[30rem] rounded-br-[100px] rounded-bl-[50px]" src="/images/pfpExtendedCut.png"></img>
                   </div>
 
                   <div id="introduction" className={`text-purple-100 text-[5rem] gap-52 leading-[5rem] h-fit col-span-2`}>
                     <div id="title" className={`${ultra.className}`}>
-                      <p className="  ">Hello! I'm Oliver </p>
-                      <p className="text-purple-300  ml-5">A Full <span className={`${lora.className}`}> Stack </span></p>
-                      <p className=" gradientText ml-20">DEVELOPER</p>
+                      <p className="  ">Hello! <span className={`${oswald.className}`}>I'm</span>  Oliver </p>
+                      <p className="text-purple-300  ml-5">A Full Stack</p>
+                      <p className={` gradientText ml-20 ${oswald.className} tracking-wider`}>DEVELOPER</p>
                     </div>
 
                     <p className={`text-[2rem] my-5 leading-8 ${lora.className}`}>I have strong problem-solving and analytical skills, experience
