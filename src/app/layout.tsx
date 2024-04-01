@@ -20,7 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="">{children}</body>
+      <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+          <script src="https://kit.fontawesome.com/5509a13330.js" ></script>
+
+      </head>
+      <body className="select-none">{children}</body>
     </html>
   );
 }

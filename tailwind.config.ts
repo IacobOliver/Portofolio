@@ -1,11 +1,9 @@
 
 import type { Config } from "tailwindcss";
-import { Ultra , Montserrat} from "next/font/google";
 
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
-
 
 const config: Config = {
   content: [

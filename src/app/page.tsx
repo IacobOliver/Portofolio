@@ -5,10 +5,10 @@ import { AuroraBackground } from "./_components/AuroraBackground";
 import SlideLoading from "./_components/SlideLoading";
 import Header from "./_components/Header";
 
-import { Ultra, Lora, Oswald } from 'next/font/google'
+import { Ultra, Lora } from 'next/font/google'
 
 const lora = Lora({
-  weight: '600',
+  weight: '400',
   subsets: ['latin'],
 })
 
@@ -16,10 +16,7 @@ const ultra = Ultra({
   weight: '400',
   subsets: ['latin'],
 })
-const oswald = Oswald({
-  weight: '600',
-  subsets: ['latin'],
-})
+
 
 export default function Home() {
   const [showAuroraBackground, setShowAuroraBackground] = useState(false);
@@ -46,19 +43,25 @@ export default function Home() {
               <>
                 <Header />
 
-                <div id="mainContainer" className="grid grid-cols-3 w-full h-full p-10 gap-20 z-20">
-                <div id="pfpContainer" className=" h-fit w-fit bg-[#0f0718] bg-opacity-20 rounded-br-[400px] rounded-tl-[400px]  rounded-tr-[70px]  rounded-bl-[300px]">
-                    <img className="w-[30rem] rounded-br-[100px] rounded-bl-[50px]" src="/images/pfpExtendedCut.png"></img>
+                <div id="mainContainer" className="grid grid-cols-5 justify-items-center w-full h-full p-10  z-20">
+                  <div id="pfpContainer" className="mr-20 relative col-span-2 h-fit w-fit bg-[#170c24] bg-opacity-30 rounded-br-[400px] rounded-tl-[400px]  rounded-tr-[70px]  rounded-bl-[300px]">
+                    <img className="w-[30rem] rounded-br-[100px] rounded-bl-[50px]" src="/images/pfpExtendedCut.png" draggable={false}></img>
+
+                    <div id="moonContainer" className="flex items-center justify-center absolute top-5 -right-[70px]">
+                      <div className="bg-white w-[10rem] h-[10rem] absolute rounded-full bg-opacity-90 blur-2xl "></div>
+                      <img className="w-[10rem] animate-spin animate-infinite animate-duration-[60s]" src="/images/moon.png" draggable={false}></img>
+                    </div>
                   </div>
 
-                  <div id="introduction" className={`text-purple-100 text-[5rem] gap-52 leading-[5rem] h-fit col-span-2`}>
+                  <div id="introduction" className={`flex flex-col justify-center h-full text-purple-100 text-[5rem] leading-[5rem] col-span-3`}>
                     <div id="title" className={`${ultra.className}`}>
-                      <p className="  ">Hello! <span className={`${oswald.className}`}>I'm</span>  Oliver </p>
+                      <p className="  ">Hello! <span className={``}>I'm</span>  Oliver </p>
                       <p className="text-purple-300  ml-5">A Full Stack</p>
-                      <p className={` gradientText ml-20 ${oswald.className} tracking-wider`}>DEVELOPER</p>
+                      <p className={` gradientText ml-20 tracking-wider`}>DEVELOPER</p>
                     </div>
 
-                    <p className={`text-[2rem] my-5 leading-8 ${lora.className}`}>I have strong problem-solving and analytical skills, experience
+                    <p className={`text-[1.5rem] leading-9 mt-10 ${lora.className}`}>
+                      I have strong problem-solving and analytical skills, experience
                       with web application development and I have solid
                       understanding of object-oriented programming. Experience with relational and non-relational databases
                       and familiar with cloud platforms. I like working with
@@ -66,27 +69,18 @@ export default function Home() {
                       and finding efficient solutions.
                     </p>
 
-                    <div className=" flex items-center h-20 mt-16">
-                      <div className=" mr-10 gradientText text-5xl group hover:animate-pulse cursor-pointer">
-                        Contact me
-                        <div className="w-full h-[2.5px]  group-hover:bg-purple-300 duration-500 "></div>
-                      </div>
-                      <button className="p-4 text-lg text-gray-500 underline">
-                        Download CV
+                    <div className={`${lora.className} flex items-center h-20 mt-16 text-4xl`}>
+                      <button className="py-4 px-8 text-purple-600 bg-purple-100 bg-opacity-90 rounded-xl mr-9 shadow-lg shadow-current">
+                        Resume
+                        <i className="fa-regular fa-circle-down ml-3"></i>
                       </button>
-                    </div>
 
-                    <div>
-
+                      <div className=" mr-10 gradientText bg-opacity-50 py-4 px-8 rounded-xl  group hover:animate-pulse cursor-pointer shadow-lg shadow-current">
+                        Contact me
+                        <div className="w-full h-[2px]  group-hover:bg-purple-300 duration-500"></div>
+                      </div>
                     </div>
                   </div>
-
-                  {/* <div id="moonContainer" className="flex items-center justify-center relative ">
-                    <div className="bg-white w-[38rem] h-[38rem] absolute rounded-full bg-opacity-70 blur-xl "></div>
-                    <img className="w-[38rem] animate-spin animate-infinite animate-duration-[60s]" src="/images/moon.png"></img>
-                  </div> */}
-
-                 
 
                 </div>
               </>} />

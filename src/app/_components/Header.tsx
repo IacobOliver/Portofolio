@@ -1,12 +1,14 @@
 "use client"
+import { Ultra } from "next/font/google";
 interface ButtonProps {
     text: string;
 }
+const ultra = Ultra({
+    weight: '400',
+    subsets: ['latin'],
+  })
 
 export default function Header() {
-  
-  
-
     const Button1 = ({ text }: ButtonProps) => {
         return (
 
@@ -24,11 +26,9 @@ export default function Header() {
     }
 
 
-
-
     return (
         <div id='principalContainer' className='w-full py-5 text-white flex justify-between items-center px-10 z-10'>
-            <p className="text-3xl">Iacob Oliver</p>
+            <p className={`${ultra.className} text-3xl`}>Iacob Oliver</p>
 
             <div id='buttons' className='grid grid-cols-3 justify-items-center text-xl font-bold'>
                 <Button1 text={"Home"} />
@@ -37,7 +37,7 @@ export default function Header() {
             </div>
 
             <a href="https://github.com/IacobOliver" target="_blank" className="flex w-fit cursor-pointer">
-                <img src="/images/github-mark-white.png" className="w-[3rem]"></img>
+                <img src="/images/icons/github-mark-white.png" className="w-[3rem]" draggable={false}></img>
             </a>
         </div>
 
