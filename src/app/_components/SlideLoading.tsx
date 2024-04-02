@@ -2,8 +2,8 @@
 import React, { useEffect, useRef } from 'react'
 
 export default function SlideLoading() {
-    const loader = useRef(null);
-    const path = useRef(null);
+    const loader = useRef<HTMLInputElement>(null);
+    const path = useRef<SVGPathElement>(null);
     const initialCurve = 200;
     const duration = 700;
     let start : number;
@@ -21,7 +21,7 @@ export default function SlideLoading() {
       }
   
       const elapsed = timestamp - start;
-      loader.current.style.top = easeOutQuad(elapsed, 0, -loaderHeight(), duration) + "px";
+      loader.current!.style.top = easeOutQuad(elapsed, 0, -loaderHeight(), duration) + "px";
   
       if(elapsed < duration){
         requestAnimationFrame(animate)
@@ -33,14 +33,14 @@ export default function SlideLoading() {
     }
   
     const loaderHeight = () => {
-      const loaderBounds =  loader.current.getBoundingClientRect();
+      const loaderBounds =  loader.current!.getBoundingClientRect();
       return loaderBounds.height;
     }
   
     const setPath = ( curve : number) => {
       const width = window.innerWidth
       const height = loaderHeight();
-      path.current.setAttributeNS(null, "d",
+      path.current!.setAttributeNS(null, "d",
       `M0 0
       L${width} 0
       L${width} ${height}
