@@ -63,8 +63,8 @@ export default function Home() {
                 <p className={`text-[1.5rem] leading-9 mt-10 ${lora.className}`}>
                   I am a disciplined and ambitios person, I love programming and always welcome new challenges. 
                   I want to  learn new technologies and sharpen my current frontend and backend skills.
-                  I like working with other people and I'm open to new ideas.
-                  I enjoy help others and I don't hesitate to ask for help myself.
+                  I like working with other people and I&apos;`m open to new ideas.
+                  I enjoy help others and I don&apos;`t hesitate to ask for help myself.
                 </p>
 
                 <div className={`${lora.className} flex items-center h-20 mt-16 text-4xl`}>
