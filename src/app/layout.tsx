@@ -19,7 +19,7 @@ export default function RootLayout({
         <Script src="https://kit.fontawesome.com/5509a13330.js" />
 
       </head>
-      <body className="select-none">{children}</body>
+      <body className="">{children}</body>
     </html>
   );
 }
