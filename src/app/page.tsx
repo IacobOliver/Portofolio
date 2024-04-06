@@ -7,7 +7,9 @@ import Header from "./_components/Header";
 
 import { Ultra, Lora } from 'next/font/google'
 import Image from "next/image";
-import AboutMe from "./_components/AboutMe";
+import AboutMe from "./_components/aboutMe/AboutMe";
+import ListProjects from "./_components/projects/ListProjects";
+import Alert from "./_components/Alert";
 
 const lora = Lora({
   weight: '400',
@@ -61,7 +63,7 @@ export default function Home() {
                 </div>
 
                 <p className={`text-[1.5rem] leading-9 mt-10 ${lora.className}`}>
-                  I am a disciplined and ambitios person, I love programming and always welcome new challenges. 
+                  I am a disciplined and ambitios person, I love programming and always welcome new challenges.
                   I want to  learn new technologies and sharpen my current frontend and backend skills.
                   I like working with other people and I&apos;`m open to new ideas.
                   I enjoy help others and I don&apos;`t hesitate to ask for help myself.
@@ -83,10 +85,16 @@ export default function Home() {
             </div>
           </AuroraBackground>
 
+          <AboutMe />
+
+          <ListProjects />
+
+          <Alert/>
+
         </>
       }
 
-      <AboutMe />
+
 
       <div className="min-h-screen w-10 "></div>
 
