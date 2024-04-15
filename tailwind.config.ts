@@ -1,5 +1,6 @@
 
 import type { Config } from "tailwindcss";
+const withMT = require("@material-tailwind/react/utils/withMT");
 
 const {
   default: flattenColorPalette,
@@ -10,6 +11,9 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
+
   ],
   theme: {
     extend: {
@@ -38,7 +42,8 @@ const config: Config = {
     },
   },
   plugins: [addVariablesForColors,
-            require('tailwindcss-animated') ],
+            require('tailwindcss-animated'),
+            withMT ],
 };
 
 function addVariablesForColors({ addBase, theme }: any) {
