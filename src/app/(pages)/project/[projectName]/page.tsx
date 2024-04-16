@@ -1,9 +1,11 @@
+"use client"
 import { projects } from '@/app/_utils/ProjectData'
 //import { Carousel } from '@material-tailwind/react'
 import { Carousel } from "../../../_utils/MaterialTailwind"
 import React from 'react'
 import Header from '@/app/_components/Header'
 import { Lora, Ultra } from 'next/font/google'
+import Image from 'next/image'
 
 
 const lora = Lora({
@@ -28,8 +30,11 @@ export default function VisitProject({ params }: { params: any }) {
       <div id="carrouselAndDescription" className='min-w-full flex items-center mt-10'>
         <Carousel placeholder={""} className="rounded-xl w-1/2">
           {
-            project.images.map(image =>
-              <img
+            project.images.map((image, index) =>
+              <Image
+                key={index}
+                width={1000}
+                height={10}
                 src={image}
                 alt="image 1"
                 className="h-full w-full object-cover"
