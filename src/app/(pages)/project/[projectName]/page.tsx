@@ -6,6 +6,7 @@ import React from 'react'
 import Header from '@/app/_components/Header'
 import { Lora, Ultra } from 'next/font/google'
 import Image from 'next/image'
+import { IconButton } from '@material-tailwind/react'
 
 
 const lora = Lora({
@@ -25,10 +26,60 @@ export default function VisitProject({ params }: { params: any }) {
   return (
     <div className={`min-h-screen min-w-screen gap-20 bg-black text-purple-100 ${lora.className}`}>
       <Header />
-      <h1 className={`text-[4rem]  text-center ${ultra.className} `}>{project.name}</h1>
+      <h1 className={`text-[4rem] mb-10 mt-7 px-20 text-center ${ultra.className} `}>{project.name}</h1>
 
-      <div id="carrouselAndDescription" className='min-w-full flex items-center mt-10'>
-        <Carousel placeholder={""} className="rounded-xl w-1/2">
+      <div id="carrouselAndDescription" className='min-w-full flex flex-col items-center mt-10 px-20'>
+        <Carousel key={101} placeholder={""} className="rounded-xl w-full"
+          loop={true}
+          navigation={() => <></>}
+          prevArrow={({ handlePrev }) => (
+            <IconButton
+              placeholder=""
+              variant="text"
+              size="lg"
+              onClick={handlePrev}
+              className="!absolute top-2/4 left-4 -translate-y-2/4 bg-purple-300 bg-opacity-50 hover:bg-gray-200"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="h-6 w-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                />
+              </svg>
+            </IconButton>
+          )}
+          nextArrow={({ handleNext }) => (
+            <IconButton
+              placeholder=""
+              variant="text"
+              size="lg"
+              onClick={handleNext}
+              className="!absolute top-2/4 !right-4 -translate-y-2/4 bg-purple-300 bg-opacity-50 hover:bg-gray-200"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2}
+                stroke="currentColor"
+                className="h-6 w-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </IconButton>
+          )}>
           {
             project.images.map((image, index) =>
               <Image
@@ -42,14 +93,16 @@ export default function VisitProject({ params }: { params: any }) {
             )
           }
         </Carousel>
-        <div id="description" className={`w-1/2 px-10 text-xl ${lora.className}`}>
+
+        <div key={102} id="description" className={`w-full mt-16 px-10 text-2xl ${lora.className}`}>
           {project.description}
         </div>
       </div>
 
-      <div className={`flex items-center h-full mt-20 gap-10 ${lora.className}`}>
-        <a target="_blank" href={`${project.gitHubLink}`} className='p-5 '>To GitHub Project</a>
-        <a className=' p-5' href="/">Back</a>
+      <div className={`flex justify-center items-center h-full py-20 gap-10 px-20 ${lora.className}`}>
+        <a target="_blank" href={`${project.gitHubLink}`} className="select-none rounded-lg bg-purple-100 tracking-wider py-3 px-6 text-center align-middle text-xl font-bold uppercase text-purple-600 shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">To GitHub Project</a>
+        <a className="select-none rounded-lg bg-purple-100 py-3 px-6 text-center align-middle text-xl tracking-wider font-bold uppercase text-purple-600 shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" href="/">Back</a>
+
       </div>
     </div>
   )
