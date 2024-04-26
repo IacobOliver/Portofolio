@@ -34,6 +34,7 @@ export default function VisitProject({ params }: { params: any }) {
           navigation={() => <></>}
           prevArrow={({ handlePrev }) => (
             <IconButton
+            key={99}
               placeholder=""
               variant="text"
               size="lg"
@@ -58,6 +59,7 @@ export default function VisitProject({ params }: { params: any }) {
           )}
           nextArrow={({ handleNext }) => (
             <IconButton
+            key={98}
               placeholder=""
               variant="text"
               size="lg"
