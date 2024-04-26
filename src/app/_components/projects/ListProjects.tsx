@@ -16,7 +16,7 @@ const lora = Lora({
 
 export default function ListProjects() {
   return (
-    <div className=' w-full px-20'>
+    <div className=' w-full px-20 mb-20 mt-14'>
       <h1 className={`${ultra.className} text-[4rem] gradientText`} >My Projects</h1>
       <div className={`${lora.className} flex flex-row flex-wrap w-full mt-16 gap-14`}>
         {
