@@ -58,11 +58,12 @@ export default function Contact() {
       setAlertMessage("Email sent successfully")
       setAlertColor("bg-purple-400");
       setShowAlert(true)
-      window.location.href = "/"
+      
 
       emailjs.send("service_ighq0xm", "template_dtvzk2q", params, "lPKTLTnGlEiMEhPGF").then(() => {
         setAlertMessage("Email sent successfully")
         setShowAlert(true)
+        window.location.href = "/"
       })
     } else {
       setAlertMessage("Please fill all the fields")
