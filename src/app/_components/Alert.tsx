@@ -1,22 +1,19 @@
 "use Client"
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
-export default function Alert() {
-    const [render, setRender] = useState(false);    
+interface params{
+  message : string,
+  show : boolean,
+  setShow : any,
+  color? : string | null
+}
 
-    useEffect(() =>{
-        setTimeout(() =>{
-            setRender(true)
-        }, 2000)
-        setTimeout(() =>{
-            setRender(false)
-        }, 5000)
-    }, [])
+export default function Alert({message, show, setShow, color} : params) {  
  
     return (
     <>{
-        render ?  <div className='bg-red-500 text-white fixed mt-10 py-5 px-10 rounded-xl animate-jump-in'>
-        This project is under construction
+      show ?  <div className={ `${color != ""? color : "bg-red-500"}  text-white fixed top-7 mt-10 py-5 px-10 z-10 rounded-xl animate-jump-in`}>
+        {message}
       </div> : null
     }
     </>

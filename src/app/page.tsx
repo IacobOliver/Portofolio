@@ -24,8 +24,16 @@ const ultra = Ultra({
 
 export default function Home() {
   const [showAuroraBackground, setShowAuroraBackground] = useState(false);
+  const [showAlert, setShowAlert] = useState(false)
 
   useEffect(() => {
+    setTimeout(() => {
+      setShowAlert(true)
+    }, 2000)
+    setTimeout(() => {
+      setShowAlert(false)
+    }, 5000)
+
     // Delay the showing of the AuroraBackground component
     const timer = setTimeout(() => {
       setShowAuroraBackground(true);
@@ -75,10 +83,10 @@ export default function Home() {
                     <i className="fa-regular fa-circle-down ml-3 text-[2rem] group-hover:animate-jump group-hover:animate-once group-hover:animate-duration-300"></i>
                   </a>
 
-                  <div className=" mr-10 gradientText bg-opacity-50 py-4 px-8 rounded-xl  group hover:animate-pulse cursor-pointer shadow-lg shadow-current">
+                  <a href="/contact" className=" mr-10 gradientText bg-opacity-50 py-4 px-8 rounded-xl  group hover:animate-pulse cursor-pointer shadow-lg shadow-current">
                     Contact me
                     <div className="w-full h-[2px]  group-hover:bg-purple-300 duration-500"></div>
-                  </div>
+                  </a>
                 </div>
               </div>
 
@@ -89,12 +97,10 @@ export default function Home() {
 
           <ListProjects />
 
-          <Alert/>
+          <Alert message="This project is still in development!" show={showAlert} setShow={setShowAlert} color="bg-red-500"/>
 
         </>
       }
-
-
 
       <div className="min-h-screen w-10 "></div>
 
