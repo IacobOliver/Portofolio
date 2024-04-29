@@ -16,7 +16,8 @@ const lora = Lora({
 const pcLink = "https://web.whatsapp.com/send?phone=40770801845";
 const phoneLink = "https://wa.me/40770801845"
 
-const link = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? phoneLink : pcLink
+//const link = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? phoneLink : pcLink
+const link = typeof window !== 'undefined' && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? phoneLink : pcLink;
 
 const Logos = ({ scrollProgress }: { scrollProgress: any }) => {
     const y = useTransform(scrollProgress, [0, 1], [-225, 0])
