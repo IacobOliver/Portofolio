@@ -25,7 +25,7 @@ export default function Experience() {
                             <p className={`text-3xl md:text-[2rem]   my-4 tracking-wide ${ultra.className}`}>Welcome to my developer journey</p>
                             <p className="text-sm md:text-base text-purple-100 mb-4">
                                 Excited to share my coding journey with you!
-                                Let's explore together as we dive into the fascinating world of programming.
+                                Let&apos;s explore together as we dive into the fascinating world of programming.
                             </p>
                         </div>
 
@@ -43,7 +43,7 @@ export default function Experience() {
                                             <p className={`mb-3 text-base text-purple-300 ${lora.className}`}>December 2022 - Present,<br /> Full Stack Developer </p>
                                             <h4 className={`mb-3 tracking-wide text-lg md:text-2xl ${ultra.className}`}>Clean Code</h4>
                                             <p className={`text-sm md:text-base leading-snug text-purple-100 ${lora.className}`}>
-                                                I started learning the MERN stack and Java's OOP concepts from scratch. Over a year and a half,
+                                                I started learning the MERN stack and Java&apos;s OOP concepts from scratch. Over a year and a half,
                                                 I worked on various solo and team projects to enhance my skills. Simultaneously,
                                                 I began contributing to the development of an e-learning platform called CleanCodeQuest.
                                                 Additionally, I took on freelance work, delivering landing pages to clients to earn extra income.
