@@ -7,6 +7,7 @@ import Header from '@/app/_components/Header'
 import { Lora, Ultra } from 'next/font/google'
 import Image from 'next/image'
 import { IconButton } from '@material-tailwind/react'
+import Footer from '@/app/_components/Footer'
 
 
 const lora = Lora({
@@ -106,6 +107,8 @@ export default function VisitProject({ params }: { params: any }) {
         <a className="select-none rounded-lg bg-purple-100 py-3 px-6 text-center align-middle text-xl tracking-wider font-bold uppercase text-purple-600 shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" href="/">Back</a>
 
       </div>
+
+      <Footer />
     </div>
   )
 }

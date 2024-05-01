@@ -32,3 +32,8 @@
 body {
   scrollbar-width: none; /* Firefox */
 }
+
+::selection{
+  background-color: rgb(227, 132, 227);
+  color:black
+}

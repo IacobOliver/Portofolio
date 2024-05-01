@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import emailjs from 'emailjs-com';
 import Alert from '@/app/_components/Alert';
 import Footer from '@/app/_components/Footer';
+import Header from '@/app/_components/Header';
 
 
 
@@ -75,8 +76,9 @@ export default function Contact() {
 
 
   return (
-    <div className='min-w-screen min-h-screen bg-black flex items-center justify-center'>
+    <div className='min-w-screen min-h-screen bg-black flex flex-col items-center justify-center'>
       <SlideLoading />
+      <Header/>
 
       {loadContent &&
        <div className='flex flex-col items-center'>

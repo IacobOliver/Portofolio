@@ -11,6 +11,7 @@ import AboutMe from "./_components/aboutMe/AboutMe";
 import ListProjects from "./_components/projects/ListProjects";
 import Alert from "./_components/Alert";
 import Footer from "./_components/Footer";
+import Experience from "./_components/aboutMe/Experience";
 
 const lora = Lora({
   weight: '400',
@@ -95,6 +96,8 @@ export default function Home() {
           </AuroraBackground>
 
           <AboutMe />
+
+          <Experience />
 
           <ListProjects />
 
