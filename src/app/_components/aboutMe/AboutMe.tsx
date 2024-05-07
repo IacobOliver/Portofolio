@@ -60,9 +60,9 @@ export default function AboutMe() {
                   variants={fadeInAnimationVariants}
                   initial ="initial"
                   whileInView="animate"
-                  // viewport={{
-                  //   once: true,
-                  // }}
+                  viewport={{
+                    once: true,
+                  }}
                   custom = {index}>
                     {skill}
                 </motion.div>

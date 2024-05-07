@@ -18,7 +18,7 @@ export default function ListProjects() {
   return (
     <div className=' w-full px-20 mb-20 mt-14'>
       <h1 className={`${ultra.className} text-[4rem] gradientText`} >My Projects</h1>
-      <div className={`${lora.className} flex flex-row flex-wrap w-full mt-16 gap-14`}>
+      <div className={`${lora.className} grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center  w-full mt-16 gap-14`}>
         {
             projects.map((project, index) => <ProjectCard key={index} project={project} />)
         }
