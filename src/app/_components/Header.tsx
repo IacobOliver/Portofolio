@@ -28,10 +28,10 @@ export default function Header() {
     }
 
     return (
-        <div id='principalContainer' className='relative w-full py-5 text-white flex justify-center items-center px-10 z-10'>
+        <div id='principalContainer' className='relative w-full min-h-[100px] py-5 text-white flex justify-center items-center px-10 z-10'>
             <p className={`${ultra.className} text-3xl absolute left-10`}>Iacob Oliver</p>
 
-            <div id='buttons' className='grid grid-cols-3 justify-items-center text-xl font-bold w-[30rem]'>
+            <div id='buttons' className='hidden md:grid grid-cols-3 justify-items-center text-xl font-bold w-[30rem]'>
                 <Button1 path="/" text={"Home"} />
                 <Button1 path="#" text={"About"} />
                 <Button1 path="#" text={"Work"} />

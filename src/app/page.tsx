@@ -51,13 +51,13 @@ export default function Home() {
 
       {showAuroraBackground &&
         <div className="bg-black w-screen h-fit flex flex-col items-center">
-          <AuroraBackground showRadialGradient={true} className="w-screen z-0 rounded-[2rem] shadow-xl shadow-[#1c1c1f]">
+          <AuroraBackground showRadialGradient={true} className="w-screen z-0 rounded-b-[2rem] shadow-xl shadow-[#1c1c1f]">
             <></>
             <Header />
 
             <div id="mainContainer" className="grid grid-cols-5 justify-items-center w-full h-full p-10  z-20">
-              <div id="pfpContainer" className="mr-20 relative col-span-2 h-fit w-fit bg-[#170c24] bg-opacity-30 rounded-br-[400px] rounded-tl-[400px]  rounded-tr-[70px]  rounded-bl-[300px]">
-                <Image width={480} height={10} alt="pfpExtended" className="min-w-[20rem] rounded-br-[100px] rounded-bl-[50px]" src="/images/pfpExtendedCut.png" draggable={false} />
+              <div id="pfpContainer" className="hidden lg:flex  mr-20 relative col-span-2 h-fit w-fit bg-[#170c24] bg-opacity-30 rounded-br-[400px] rounded-tl-[400px]  rounded-tr-[70px]  rounded-bl-[300px]">
+                <Image width={480} height={10} alt="pfpExtended" className="min-w-[10rem] rounded-br-[100px] rounded-bl-[50px]" src="/images/pfpExtendedCut.png" draggable={false} />
 
                 <div id="moonContainer" className="flex items-center justify-center absolute top-5 -right-[70px]">
                   <div className="bg-white w-[10rem] h-[10rem] absolute rounded-full blur-3xl z-10 "></div>
@@ -65,28 +65,28 @@ export default function Home() {
                 </div>
               </div>
 
-              <div id="introduction" className={`flex flex-col justify-center h-full text-purple-100 text-[3rem] xl:text-[5rem] leading-[3rem] xl:leading-[5rem] col-span-3`}>
+              <div id="introduction" className={`flex flex-col justify-center h-full text-purple-100 text-[2.5rem] md:text-[3rem] xl:text-[5rem] leading-[3rem] xl:leading-[5rem] col-span-full lg:col-span-3`}>
                 <div id="title" className={`${ultra.className}`}>
-                  <p className="  ">Hello! I&apos;m  Oliver </p>
-                  <p className="text-purple-300  ml-5">A Full Stack</p>
-                  <p className={` gradientText ml-20 tracking-wider`}>DEVELOPER</p>
+                  <p className=" text-center md:text-start ">Hello! I&apos;m  Oliver </p>
+                  <p className="text-purple-300  md:ml-5 text-center md:text-start">A Full Stack</p>
+                  <p className={` gradientText md:ml-20 tracking-wider text-center md:text-start`}>DEVELOPER</p>
                 </div>
 
-                <p className={`text-[1.2rem] xl:text-[1.5rem]  leading-6 xl:leading-9 mt-4 xl:mt-10 ${lora.className}`}>
+                <p className={`text-[0.8rem] md:text-[1.2rem] xl:text-[1.5rem] leading-5 md:leading-6 xl:leading-9 mt-4 xl:mt-10 ${lora.className}`}>
                   I am a disciplined and ambitios person, I love programming and always welcome new challenges.
                   I want to  learn new technologies and sharpen my current frontend and backend skills.
                   I like working with other people and I&apos;`m open to new ideas.
                   I enjoy help others and I don&apos;`t hesitate to ask for help myself.
                 </p>
 
-                <div className={`${lora.className} flex items-center h-20 mt-16 text-3xl xl:text-4xl`}>
-                  <a href="/files/Oliver'sResume1.pdf" download className={`py-4 px-7 group text-purple-600 bg-purple-100 bg-opacity-90 rounded-xl mr-9 shadow-lg shadow-current hover:animate-pulse `}>
-                    Resume
+                <div className={`${lora.className} flex items-center justify-center md:justify-start h-20 mt-10 md:mt-16 text-xl md:text-3xl xl:text-4xl`}>
+                  <a href="/files/Oliver'sResume1.pdf" download className={`flex items-center py-2.5 md:py-4 px-5 md:px-7 group text-purple-600 bg-purple-100 bg-opacity-90 rounded-xl mr-4 md:mr-9 shadow-lg shadow-current hover:animate-pulse `}>
+                    <p>Resume</p>
                     <i className="fa-regular fa-circle-down ml-3 text-[2rem] group-hover:animate-jump group-hover:animate-once group-hover:animate-duration-300"></i>
                   </a>
 
-                  <a href="/contact" className=" mr-10 gradientText bg-opacity-50 py-4 px-8 rounded-xl  group hover:animate-pulse cursor-pointer shadow-lg shadow-current">
-                    Contact me
+                  <a href="/contact" className=" md:mr-10 gradientText bg-opacity-50  rounded-xl  group hover:animate-pulse cursor-pointer shadow-lg shadow-current">
+                    <p>Contact me</p>
                     <div className="w-full h-[2px]  group-hover:bg-purple-300 duration-500"></div>
                   </a>
                 </div>
