@@ -14,13 +14,13 @@ const ultra = Ultra({
 export default function Experience() {
     return (
         <div className={`text-purple-300  w-full flex flex-col pt-[2.5rem] items-start px-20 ${lora.className} font-normal`}>
-            <h1 className={`${ultra.className} text-[4rem] gradientText`} >Experience</h1>
+            <h1 className={`${ultra.className} text-[3rem] lg:text-[4rem] gradientText`} >Experience</h1>
 
 
             <section>
                 <div className="bg-black text-purple-100 pb-8">
-                    <div className="container mx-auto flex flex-col items-start md:flex-row mb-12">
-                        <div className="flex flex-col w-full sticky md:top-36 lg:w-1/3 mt-2 md:mt-12 pr-8">
+                    <div className="container mx-auto flex flex-col items-start lg:flex-row mb-12">
+                        <div className="flex flex-col w-full sticky lg:top-36 lg:w-1/3 mt-2 md:mt-12 pr-8">
                             <p className="ml-2 text-purple-300 uppercase tracking-loose">Working Process</p>
                             <p className={`text-3xl md:text-[2rem]   my-4 tracking-wide ${ultra.className}`}>Welcome to my developer journey</p>
                             <p className="text-sm md:text-base text-purple-100 mb-4">
@@ -31,7 +31,7 @@ export default function Experience() {
 
                         <div className="ml-0 lg:w-2/3 sticky">
                             <div className="container mx-auto w-full h-full">
-                                <div className="relative wrap overflow-hidden py-10 pl-10 h-full w-full ">
+                                <div className="relative wrap overflow-hidden lg:py-10 lg:pl-10 h-full w-full ">
                                     <div className="border-2-2 border-yellow-555 absolute h-full border"
                                         style={{ right: "50%", border: "2px solid hsla(288, 100%, 85%, 1)", borderRadius: "1%" }}></div>
                                     <div className="border-2-2 border-yellow-555 absolute h-full border"

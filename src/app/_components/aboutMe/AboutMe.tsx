@@ -44,15 +44,15 @@ export default function AboutMe() {
 
     return (
         <div 
-         className={`w-full h-fit flex  my-[5rem] items-start px-20 ${lora.className} font-normal`}
+         className={`w-full h-fit flex flex-col lg:flex-row my-[5rem] items-start px-20 ${lora.className} font-normal`}
          >
 
-          <div className='flex flex-col w-2/3 '>
-            <MaskText  text={["About me"]} loadTimer={3000} className={`${ultra.className} text-[4rem] gradientText`}  />
-            <MaskText text={phrases} loadTimer={6000} className={` ${lora.className} text-sm md:text-base text-white`}/>
+          <div className='flex flex-col w-full lg:w-2/3 '>
+            <MaskText  text={["About me"]} loadTimer={3000} className={`${ultra.className} text-[3rem] lg:text-[4rem] gradientText text-center lg:text-start`}  />
+            <MaskText text={phrases} loadTimer={6000} className={` ${lora.className} text-sm md:text-base text-white text-center lg:text-start`}/>
           </div>
 
-          <div className='w-1/3 flex flex-wrap gap-3 justify-center mt-10'>
+          <div className='w-full lg:w-1/3 flex flex-wrap gap-3 justify-center mt-10'>
               {skills.map((skill, index) => 
                 <motion.div 
                   key = {index}

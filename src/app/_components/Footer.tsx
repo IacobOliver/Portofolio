@@ -24,7 +24,7 @@ const Logos = ({ scrollProgress }: { scrollProgress: any }) => {
     return (
         <div className="w-full bg-black overflow-hidden">
             <motion.div style={{ y }} className="h-full bg-[rgb(20,20,20)] flex flex-col py-10 px-20">
-                <p className={`gradientText text-[4rem] ${ultra.className}`}>Get in Touch</p>
+                <p className={`gradientText text-[3rem] lg:text-[4rem] ${ultra.className}`}>Get in Touch</p>
                 <p className={`text-purple-100 text-[1.1rem] w-1/2 ${lora.className}`}>Thank you for taking the time to explore my portfolio! I&apos;d love to hear from you and discuss how we can collaborate. Let&apos;s stay connected – feel free to reach out and get in touch!</p>
                 <div className="flex flex-row w-full my-10">
                     <Icon src="/images/icons/github.png" redirectLink="https://github.com/IacobOliver?tab=overview&from=2024-04-01&to=2024-04-15" />
