@@ -13,7 +13,7 @@ const ultra = Ultra({
 
 export default function Experience() {
     return (
-        <div className={`text-purple-300  w-full flex flex-col pt-[2.5rem] items-start px-20 ${lora.className} font-normal`}>
+        <div className={`text-purple-300  w-full flex flex-col pt-[2.5rem] items-start  ${lora.className} font-normal`}>
             <h1 className={`${ultra.className} text-[3rem] lg:text-[4rem] gradientText`} >Experience</h1>
 
 

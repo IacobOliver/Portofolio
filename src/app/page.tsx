@@ -46,16 +46,15 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex h-screen w-screen flex-col items-center justify-between  bg-black ">
+    <main className="flex h-screen w-screen flex-col items-center justify-between  bg-black   ">
       <SlideLoading />
 
       {showAuroraBackground &&
-        <div className="bg-black w-screen h-fit flex flex-col items-center">
-          <AuroraBackground showRadialGradient={true} className="w-screen z-0 rounded-b-[2rem] shadow-xl shadow-[#1c1c1f]">
-            <></>
+        <div className="bg-black w-screen h-fit flex flex-col items-center px-8 sm:px-20">
+          <AuroraBackground showRadialGradient={true} className="w-screen px-8 sm:px-20 z-0 rounded-b-[2rem] shadow-xl shadow-[#1c1c1f]">
             <Header />
 
-            <div id="mainContainer" className="grid grid-cols-5 justify-items-center w-full h-full p-10  z-20">
+            <div id="mainContainer" className="grid grid-cols-5 justify-items-center w-full h-full  z-20">
               <div id="pfpContainer" className="hidden lg:flex  mr-20 relative col-span-2 h-fit w-fit bg-[#170c24] bg-opacity-30 rounded-br-[400px] rounded-tl-[400px]  rounded-tr-[70px]  rounded-bl-[300px]">
                 <Image width={480} height={10} alt="pfpExtended" className="min-w-[10rem] rounded-br-[100px] rounded-bl-[50px]" src="/images/pfpExtendedCut.png" draggable={false} />
 

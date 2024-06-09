@@ -44,7 +44,7 @@ export default function AboutMe() {
 
     return (
         <div 
-         className={`w-full h-fit flex flex-col lg:flex-row my-[5rem] items-start px-20 ${lora.className} font-normal`}
+         className={`w-full h-fit flex flex-col lg:flex-row my-[5rem] items-start ${lora.className} font-normal`}
          >
 
           <div className='flex flex-col w-full lg:w-2/3 '>
