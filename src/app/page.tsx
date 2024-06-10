@@ -12,6 +12,7 @@ import ListProjects from "./_components/projects/ListProjects";
 import Alert from "./_components/Alert";
 import Footer from "./_components/Footer";
 import Experience from "./_components/aboutMe/Experience";
+import NewListProjects from "./_components/projects/NewListProjects";
 
 const lora = Lora({
   weight: '400',
@@ -98,7 +99,8 @@ export default function Home() {
 
           <Experience />
 
-          <ListProjects />
+          {/* <ListProjects /> */}
+          <NewListProjects />
 
           <Footer /> 
 
