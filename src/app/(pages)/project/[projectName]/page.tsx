@@ -1,6 +1,5 @@
 "use client"
 import { projects } from '@/app/_utils/ProjectData'
-//import { Carousel } from '@material-tailwind/react'
 import { Carousel } from "../../../_utils/MaterialTailwind"
 import React from 'react'
 import Header from '@/app/_components/Header'
@@ -21,9 +20,9 @@ const ultra = Ultra({
 })
 
 export default function VisitProject({ params }: { params: any }) {
-  let project = projects.filter(project => project.name == params.projectName)[0]
+  let project = projects.filter(project => project.name.replace(/\s+/g, '') == params.projectName)[0]
 
-  console.log(params)
+  //console.log(params)
   return (
     <div className={`flex flex-col items-center min-h-screen w-screen gap-20 bg-black text-purple-100 ${lora.className}  px-8 sm:px-20`}>
       <Header />

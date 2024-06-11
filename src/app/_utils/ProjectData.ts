@@ -44,7 +44,7 @@ export let projects: Array<Project> = [
       deployLink: "#"
    },
    {
-      name: "Bradu Law",
+      name:"Bradu Law",
       description: "This is a freelance project, a presentaion website for a lawyer client and the project repository is on another github accout, but you can see my activity on it. The project was made with JavaScript and React framework, and for styling I used TailwindCss  . It consists of over 10 pages, containing data about the lawyer business",
       images: ["/images/projects/braduLaw/0fe7d9b2-76ca-4374-b24c-b221073f84d7.jpg",
          "/images/projects/braduLaw/b0a57bab-9c1a-4838-9919-608d0737fc82.jpg"],
@@ -52,7 +52,7 @@ export let projects: Array<Project> = [
       deployLink: "https://bradu-law-2988d.firebaseapp.com/"
    },
    {
-      name: "Restaurant Mania",
+      name:"Restaurant Mania",
       description: "RestaurantMania is a web application made with Java,Spring, React, JavaScript and more. Designed to help users easily and quickly find their desired restaurants ,it provides a comprehensive list of restaurants with detailed information, including location, operating hours, menus, prices, product images, and ratings. Users can also publish their own restaurants and easily update their content.",
       images: ["/images/projects/restaurantMania/create-profesional-full-stack-websites.webp",
          "/images/projects/restaurantMania/img_3.png",
@@ -63,7 +63,7 @@ export let projects: Array<Project> = [
       deployLink: "#"
    },
    {
-      name: "Employee Mandness",
+      name:"Employee Mandness",
       description: "This is a solo project where I learned to use advanced MERN(Mongo, Express.js, React, Node.js) stack operations and routing. The project focuses on managing employee data for a company, allowing a wide variety of operations on its database",
       images: ["/images/projects/employeeMadness/image-1.png"],
       gitHubLink: "https://github.com/IacobOliver/PublicEmployeeMadness",
