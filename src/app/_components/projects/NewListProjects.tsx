@@ -19,8 +19,8 @@ export default function NewListProjects() {
     <main className="h-auto w-full  flex flex-col  text-purple-100">
         <p className={`${ultra.className} text-[3rem] lg:text-[4rem] gradientText`} >My Projects</p>
           {
-            projects.map( project => {
-              return <NewProjectCard project={project}/>
+            projects.map( (project, index) => {
+              return <NewProjectCard key={index} project={project}/>
             })
           }
     </main>

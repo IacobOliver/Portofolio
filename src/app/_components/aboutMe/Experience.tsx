@@ -1,4 +1,5 @@
 import { Lora, Ultra } from "next/font/google";
+import Image from "next/image";
 import React from "react";
 
 const lora = Lora({
@@ -70,7 +71,7 @@ export default function Experience() {
                                         </div>
                                     </div>
                                 </div>
-                                <img className="mx-auto -mt-36 md:-mt-36" src="https://user-images.githubusercontent.com/54521023/116968861-ef21a000-acd2-11eb-95ac-a34b5b490265.png" />
+                                <Image width={500} height={500} className="mx-auto -mt-36 md:-mt-36" src="/images/icons/ExperienceIcon.png" alt="icon"/>
                             </div>
                         </div>
                     </div>

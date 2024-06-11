@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import  './NewProjectCard.css';
 import { Ultra } from 'next/font/google';
+import Image from 'next/image';
 
 
 
@@ -22,8 +23,6 @@ export default function NewProjectCard({project} : {project : any}) {
     const [isActive, setIsActive] = useState(false);
     const { name, images } = project;
 
-   
- 
     return (
         <a className={`border-t-[2px] border-[#f0b3ff] py-10 max-h-[200px] cursor-pointer w-full flex justify-center  items-center text-3xl lg:text-5xl ${ultra.className}`} 
              onMouseEnter={() => {setIsActive(true)}} 
@@ -32,7 +31,7 @@ export default function NewProjectCard({project} : {project : any}) {
         >
             <p className='mr-1'>{name.split(" ")[0]}</p>
             <motion.div className="" variants={anim} animate={isActive ? "open" : "closed"}>
-                <img className='w-[auto] h-[10vw] mx-3' src={images[0]}></img>
+                <Image height={200} width={300} className='w-[auto] h-[10vw] mx-3' src={images[0]} alt={project.name}/>
             </motion.div>
             <p className='ml-1'>{name.split(" ").slice(1).join(" ")}</p>
         </a>

@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { Lora, Ultra } from "next/font/google";
+import Image from "next/image";
 
 const ultra = Ultra({
     weight: '400',
@@ -31,7 +32,7 @@ const Logos = ({ scrollProgress }: { scrollProgress: any }) => {
                     <Icon src="/images/icons/linkedin.png" redirectLink="https://www.linkedin.com/in/oliver-iacob-662b79287/" />
 
                     <a className="bg-purple-300 hover:bg-purple-400 p-1 rounded-xl w-12 h-12 mx-2 cursor-pointer " data-action="open" data-phone="40770801845" href={link} target="_blank">
-                        <img src="/images/icons/whatsapp.png"></img>
+                        <Image alt="footerIcon" width={200} height={200} src="/images/icons/whatsapp.png"/>
                     </a>
 
                     <Icon src="/images/icons/instagram.png" redirectLink="https://www.instagram.com/0lii2003?igsh=dHRmdWJxNXhkYjgy" />
@@ -44,7 +45,7 @@ const Logos = ({ scrollProgress }: { scrollProgress: any }) => {
 const Icon = ({ src, redirectLink }: { src: string, redirectLink: string }) => {
     return (
         <a href={redirectLink} target="_blank" className="bg-purple-300 hover:bg-purple-400 p-1 rounded-xl w-12 h-12 mx-2 cursor-pointer">
-            <img src={src} />
+            <Image alt="footerIcon" width={200} height={200} src={src} />
         </a>
     )
 }
