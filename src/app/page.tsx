@@ -1,7 +1,7 @@
 
 'use client';
 import { useEffect, useState } from "react";
-import  AuroraBackground  from "./_components/AuroraBackground";
+import AuroraBackground from "./_components/AuroraBackground";
 import SlideLoading from "./_components/SlideLoading";
 import Header from "./_components/Header";
 
@@ -13,6 +13,7 @@ import Alert from "./_components/Alert";
 import Footer from "./_components/Footer";
 import Experience from "./_components/aboutMe/Experience";
 import NewListProjects from "./_components/projects/NewListProjects";
+import { projects } from "./_utils/ProjectData";
 
 const lora = Lora({
   weight: '400',
@@ -28,6 +29,7 @@ const ultra = Ultra({
 export default function Home() {
   const [showAuroraBackground, setShowAuroraBackground] = useState(false);
   const [showAlert, setShowAlert] = useState(false)
+  const [listProjectsPattern, setListProjectsPattern] = useState(0);
 
   useEffect(() => {
     setTimeout(() => {
@@ -99,15 +101,25 @@ export default function Home() {
 
           <Experience />
 
-          {/* <ListProjects /> */}
-          <NewListProjects />
 
-          <Footer /> 
+          <div className=" w-full">
+            <div className="flex items-center gap-14">
+              <p className={`${ultra.className} text-[3rem] lg:text-[4rem] gradientText`} >My Projects</p>
+              <button onClick={() => setListProjectsPattern(listProjectsPattern + 1)} className="flex items-center  select-none rounded-lg bg-purple-100 py-1 md:py-2 px-2.5 md:px-5 text-center  text-xs md:text-sm font-bold uppercase text-purple-600 shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40">Switch template</button>
+            </div>
 
-          <Alert message="This project is still in development!" show={showAlert} setShow={setShowAlert} color="bg-red-500"/>
+            {
+              listProjectsPattern % 2 == 0 ? <ListProjects /> : <NewListProjects />
+            }
+          </div>
+
+
+          <Footer />
+
+          <Alert message="This project is still in development!" show={showAlert} setShow={setShowAlert} color="bg-red-500" />
         </div>
       }
-       
+
     </main>
   );
 }
