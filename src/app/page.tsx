@@ -82,7 +82,7 @@ export default function Home() {
                 </p>
 
                 <div className={`${lora.className} flex items-center justify-center md:justify-start h-20 mt-10 md:mt-16 text-xl md:text-3xl xl:text-4xl`}>
-                  <a href="/files/Oliver'sResume1.pdf" download className={`flex items-center py-2.5 md:py-4 px-5 md:px-7 group text-purple-600 bg-purple-100 bg-opacity-90 rounded-xl mr-4 md:mr-9 shadow-lg shadow-current hover:animate-pulse `}>
+                  <a href="\files\OliverResume.pdf" download className={`flex items-center py-2.5 md:py-4 px-5 md:px-7 group text-purple-600 bg-purple-100 bg-opacity-90 rounded-xl mr-4 md:mr-9 shadow-lg shadow-current hover:animate-pulse `}>
                     <p>Resume</p>
                     <i className="fa-regular fa-circle-down ml-3 text-[2rem] group-hover:animate-jump group-hover:animate-once group-hover:animate-duration-300"></i>
                   </a>

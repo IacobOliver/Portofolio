@@ -102,7 +102,10 @@ export default function VisitProject({ params }: { params: any }) {
       </div>
 
       <div className={`flex justify-center items-center h-full py-20 gap-10  ${lora.className}`}>
-        <a target="_blank" href={`${project.gitHubLink}`} className="select-none rounded-lg bg-purple-100 tracking-wider py-3 px-6 text-center align-middle text-xl font-bold uppercase text-purple-600 shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">To GitHub Project</a>
+        {project?.gitHubLink != "#" ?
+         <a target="_blank" href={`${project.gitHubLink}`} className="select-none rounded-lg bg-purple-100 tracking-wider py-3 px-6 text-center align-middle text-xl font-bold uppercase text-purple-600 shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">To GitHub Project</a>
+         :
+          <p className='gradientText text-2xl font-bold'>CONFIDENTIAL REPO</p>}
         <a className="select-none rounded-lg bg-purple-100 py-3 px-6 text-center align-middle text-xl tracking-wider font-bold uppercase text-purple-600 shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" href="/">Back</a>
 
       </div>

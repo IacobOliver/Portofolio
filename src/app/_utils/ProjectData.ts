@@ -27,6 +27,21 @@ export let projects: Array<Project> = [
       deployLink: "https://quest.cleancode.ro/"
    },
    {
+      name: "Magic Tattoo",
+      slug: "magic-tattoo",
+      description: "Magic Tattoo -  is a premier tattoo studio in Bucharest, showcasing a diverse catalog of tattoo styles, including neotraditional, portraits, and Polynesian. The website allows users to explore the gallery, meet the qualified artists, and book tattoos or consultations. It features an advanced configurator that calculates prices based on the tattoo's difficulty and selected options. Technologies used for this project include PHP, Laravel, JavaScript, CSS, and Tailwind. The site aims to inform and convince users to visit the salon for their next tattoo.      ",
+      images: ["/images/projects/magicTattoo/magic1.png",
+      "/images/projects/magicTattoo/magic6.png",
+      "/images/projects/magicTattoo/magic2.png",
+      "/images/projects/magicTattoo/magic3.png",
+      "/images/projects/magicTattoo/magic4.png",
+      "/images/projects/magicTattoo/magic5.png",
+      "/images/projects/magicTattoo/magic7.png",
+      ],
+      gitHubLink: "#",
+      deployLink: "https://magictattoo.ink/"
+   },
+   {
       name: "Anime Journey",
       slug: "anime-journey",
       description: "Dive into the world of anime, and find your favorite ones to chart your anime journey. This project is made with Java, JavaScript, React, SpringBoot, PostgreSQL and more others to give you a unique experience, discovering the best and the newest anime, with a score and reviews from other people for you to enjoy the best content ",
@@ -47,8 +62,8 @@ export let projects: Array<Project> = [
          "/images/projects/MagicRecuiting/magic6.jpg",
          "/images/projects/MagicRecuiting/magic7.jpg",
       ],
-      gitHubLink: "https://github.com/IacobOliver/magic-2",
-      deployLink: "#"
+      gitHubLink: "#",
+      deployLink: "https://academiamagic.ro/"
    },
    {
       name:"Bradu Law",
