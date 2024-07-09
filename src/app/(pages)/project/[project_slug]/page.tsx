@@ -20,7 +20,7 @@ const ultra = Ultra({
 })
 
 export default function VisitProject({ params }: { params: any }) {
-  let project = projects.filter(project => project.name.replace(/\s+/g, '') == params.projectName)[0]
+  let project = projects.filter(project => project.slug == params.project_slug)[0]
 
   //console.log(params)
   return (

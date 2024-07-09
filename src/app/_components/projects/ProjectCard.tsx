@@ -18,7 +18,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                 </p>
             </div>
             <div className="p-6 pt-0 flex justify-around">
-                <a data-ripple-light="true" href={`project/${project.name}`} className=" flex items-center  select-none rounded-lg bg-purple-100 py-1 md:py-2 px-2.5 md:px-5 text-center  text-xs md:text-sm font-bold uppercase text-purple-600 shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                <a data-ripple-light="true" href={`project/${project.slug}`} className=" flex items-center  select-none rounded-lg bg-purple-100 py-1 md:py-2 px-2.5 md:px-5 text-center  text-xs md:text-sm font-bold uppercase text-purple-600 shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
                     Read More
                 </a>
                 {project.deployLink != "#" &&
