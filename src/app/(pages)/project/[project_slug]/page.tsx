@@ -26,7 +26,7 @@ export default function VisitProject({ params }: { params: any }) {
   return (
     <div className={`flex flex-col items-center min-h-screen w-screen gap-20 bg-black text-purple-100 ${lora.className}  px-8 sm:px-20`}>
       <Header />
-      <h1 className={`text-[4rem] mb-10 mt-7 text-center ${ultra.className} `}>{project.name}</h1>
+      <h1 className={`text-[4rem] mb-10 pt-[120px] text-center  ${ultra.className} `}>{project.name}</h1>
 
       <div id="carrouselAndDescription" className='min-w-full flex flex-col items-center mt-10 '>
         <Carousel key={101} placeholder={""} className="rounded-xl w-full"

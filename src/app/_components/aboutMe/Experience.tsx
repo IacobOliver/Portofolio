@@ -14,14 +14,14 @@ const ultra = Ultra({
 
 export default function Experience() {
     return (
-        <div className={`text-purple-300  w-full flex flex-col pt-[2.5rem] items-start ${lora.className} font-normal`}>
+        <div id="experience" className={`text-purple-300  w-full flex flex-col pt-[2.5rem] items-start ${lora.className} font-normal`}>
             <h1 id="experienceSection" className={`${ultra.className} text-[3rem] lg:text-[4rem] gradientText`} >Experience</h1>
 
             <div id="experienceContent" className=" bg-black text-purple-100 pb-8 w-full mx-auto flex flex-col items-start lg:flex-row mb-12 ">
                 <div id="welcomeText" className="flex flex-col w-full sticky lg:top-36 lg:w-1/4 mt-2 md:mt-12 mb-14 lg:mb-0 pr-8">
                     <p className="ml-2 text-purple-300 uppercase tracking-loose">Working Process</p>
-                    <p className={`text-3xl md:text-[2rem]   my-4 tracking-wide ${ultra.className}`}>Welcome to my developer journey</p>
-                    <p className="text-sm md:text-base text-purple-100 mb-4">
+                    <p className={`text-[1.8rem] md:text-[2rem]   my-4 tracking-wide ${ultra.className}`}>Welcome to my developer journey</p>
+                    <p className="text-[0.7rem] md:text-[1.1rem] xl:text-[1.3rem] text-purple-100 mb-4">
                         Excited to share my coding journey with you!
                         Let&apos;s explore together as we dive into the fascinating world of programming.
                     </p>
@@ -39,8 +39,8 @@ export default function Experience() {
                                 <div className="order-1 w-5/12"></div>
                                 <div className="order-1 w-5/12 px-1 py-4 text-right">
                                     <p className={`mb-3 text-base text-purple-300 ${lora.className}`}>December 2022 - Present,<br /> Full Stack Developer </p>
-                                    <h4 className={`mb-3 tracking-wide text-lg md:text-2xl ${ultra.className}`}>Clean Code</h4>
-                                    <p className={`text-sm md:text-base leading-snug text-purple-100 ${lora.className}`}>
+                                    <h4 className={`mb-3 tracking-wide text-lg md:text-3xl ${ultra.className}`}>Clean Code</h4>
+                                    <p className={`text-[0.7rem] md:text-[1.1rem] xl:text-[1.3rem] leading-snug text-purple-100 ${lora.className}`}>
                                         I started learning the MERN stack and Java&apos;s OOP concepts from scratch. Over a year and a half,
                                         I worked on various solo and team projects to enhance my skills. Simultaneously,
                                         I began contributing to the development of an e-learning platform called CleanCodeQuest.
@@ -56,8 +56,8 @@ export default function Experience() {
                                 <div className="order-1 w-5/12"></div>
                                 <div className="order-1  w-5/12 px-1 py-4 text-left">
                                     <p className="mb-3 text-base text-purple-300">April 2024 - Present,<br /> Full Stack Developer</p>
-                                    <h4 className={`mb-3 font-bold text-lg md:text-2xl ${ultra.className}`}>Magic Hub</h4>
-                                    <p className="text-sm md:text-base leading-snug text-purple-100 text-opacity-100">
+                                    <h4 className={`mb-3 font-bold text-lg md:text-3xl ${ultra.className}`}>Magic Hub</h4>
+                                    <p className="text-[0.7rem] md:text-[1.1rem] xl:text-[1.3rem] leading-snug text-purple-100 text-opacity-100">
                                         At Magic Hub Romania, I work as a Full Stack Developer, focusing on maintaining and enhancing various websites. Many of these projects are legacy systems built with pure CSS, HTML, and PHP. My primary responsibilities include: <br />
                                         •  Site Maintenance: Ensuring the websites remain functional and up-to-date. <br />
                                         •  Implementation of Requests: Building and implementing new features based on client and stakeholder requests.<br />

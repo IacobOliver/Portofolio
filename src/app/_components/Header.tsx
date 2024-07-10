@@ -1,6 +1,7 @@
 "use client"
 import { Ultra } from "next/font/google";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 interface ButtonProps {
     text: string;
     path : string;
@@ -11,9 +12,10 @@ const ultra = Ultra({
 })
 
 export default function Header() {
+    const navbarRef = useRef<HTMLDivElement>(null);
+
     const Button1 = ({ text, path }: ButtonProps) => {
         return (
-
             <div className="relative inline-flex h-full mx-12 group text-2xl text-gray-300 hover:text-purple-100">
                 <div
                     className="absolute transitiona-all duration-1000 opacity-70 -inset-px group-hover:bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 rounded-full blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-300">
@@ -27,14 +29,39 @@ export default function Header() {
         )
     }
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const navbar = navbarRef.current;
+            if (!navbar) return;
+
+            let lastScrollTop = 0;
+            const navbarHeight = navbar.offsetHeight;
+
+            window.addEventListener('scroll', function () {
+                let scrollTop =  document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
+                    console.log("hide")
+                    navbar.style.transform = 'translateY(-100%)'; // Hide navbar
+                } else {
+                    navbar.style.transform = 'translateY(0)'; // Show navbar
+                    console.log("show")
+                }
+                lastScrollTop = scrollTop;
+            });
+        };
+
+        handleScroll();
+    }, []);
+
     return (
-        <div id='principalContainer' className='relative w-full min-h-[100px] py-5 text-white flex justify-center items-center z-10'>
+        <div ref={navbarRef} id='navbar' className='fixed top-0 w-full min-h-[100px] py-5 text-white flex justify-center items-center transition-all duration-300 backdrop-blur-[10px] bg-[#531068] bg-opacity-10' style={{zIndex : "99999"}}>
             <p className={`${ultra.className} text-3xl absolute left-10`}>Iacob Oliver</p>
 
             <div id='buttons' className='hidden md:grid grid-cols-3 justify-items-center text-xl font-bold w-[30rem]'>
                 <Button1 path="/" text={"Home"} />
-                <Button1 path="#" text={"About"} />
-                <Button1 path="#" text={"Work"} />
+                <Button1 path="/#about_me" text={"About"} />
+                <Button1 path="/#work" text={"Work"} />
             </div>
 
             <a href="https://github.com/IacobOliver" target="_blank" className="flex w-fit cursor-pointer absolute right-10">

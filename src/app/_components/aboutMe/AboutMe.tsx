@@ -44,19 +44,20 @@ export default function AboutMe() {
 
     return (
         <div 
-         className={`w-full h-fit flex flex-col lg:flex-row my-[5rem] items-start ${lora.className} font-normal`}
+         id="about_me"
+         className={`w-full h-fit flex flex-col lg:flex-row my-[5rem] items-start ${lora.className} font-normal !z-0`}
          >
 
           <div className='flex flex-col w-full lg:w-2/3 '>
             <MaskText  text={["About me"]} loadTimer={3000} className={`${ultra.className} text-[3rem] lg:text-[4rem] gradientText text-center lg:text-start`}  />
-            <MaskText text={phrases} loadTimer={6000} className={` ${lora.className} text-sm md:text-base text-white text-center lg:text-start`}/>
+            <MaskText text={phrases} loadTimer={6000} className={` ${lora.className} text-[0.7rem] md:text-[1.1rem] xl:text-[1.3rem] text-white text-center lg:text-start`}/>
           </div>
 
           <div className='w-full lg:w-1/3 flex flex-wrap gap-3 justify-center mt-10'>
               {skills.map((skill, index) => 
                 <motion.div 
                   key = {index}
-                  className={`text-purple-700 font-bold px-4 py-1 text-sm md:text-base bg-purple-100 rounded-lg`}
+                  className={`text-purple-700 font-bold px-4 py-1 text-[0.7rem] md:text-[1.1rem] xl:text-[1.3rem] bg-purple-100 rounded-lg`}
                   variants={fadeInAnimationVariants}
                   initial ="initial"
                   whileInView="animate"

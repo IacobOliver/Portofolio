@@ -13,7 +13,6 @@ import Alert from "./_components/Alert";
 import Footer from "./_components/Footer";
 import Experience from "./_components/aboutMe/Experience";
 import NewListProjects from "./_components/projects/NewListProjects";
-import { projects } from "./_utils/ProjectData";
 
 const lora = Lora({
   weight: '400',
@@ -49,15 +48,15 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex h-screen w-screen flex-col items-center justify-between  bg-black   ">
+    <main className="flex h-screen w-screen flex-col items-center justify-between bg-black   ">
       <SlideLoading />
 
       {showAuroraBackground &&
         <div className="bg-black w-screen h-fit flex flex-col items-center px-8 sm:px-20">
-          <AuroraBackground showRadialGradient={true} className="w-screen px-8 sm:px-20 z-0 rounded-b-[2rem] shadow-xl shadow-[#1c1c1f]">
+          <AuroraBackground showRadialGradient={true} className="w-screen pt-[120px] px-8 sm:px-20 z-20 rounded-b-[2rem] shadow-xl shadow-[#1c1c1f]">
             <Header />
 
-            <div id="mainContainer" className="grid grid-cols-5 justify-items-center w-full h-full  z-20">
+            <div id="mainContainer" className="grid grid-cols-5 justify-items-center w-full h-full ">
               <div id="pfpContainer" className="hidden lg:flex  mr-20 relative col-span-2 h-fit w-fit bg-[#170c24] bg-opacity-30 rounded-br-[400px] rounded-tl-[400px]  rounded-tr-[70px]  rounded-bl-[300px]">
                 <Image width={480} height={10} alt="pfpExtended" className="min-w-[10rem] rounded-br-[100px] rounded-bl-[50px]" src="/images/pfpExtendedCut.png" draggable={false} />
 
@@ -74,7 +73,7 @@ export default function Home() {
                   <p className={` gradientText md:ml-20 tracking-wider text-center md:text-start`}>DEVELOPER</p>
                 </div>
 
-                <p className={`text-[0.8rem] md:text-[1.2rem] xl:text-[1.5rem] leading-5 md:leading-6 xl:leading-9 mt-4 xl:mt-10 ${lora.className}`}>
+                <p className={`text-[0.7rem] md:text-[1.1rem] xl:text-[1.3rem] leading-5 md:leading-6 xl:leading-9 mt-4 xl:mt-10 ${lora.className}`}>
                   I am a disciplined and ambitios person, I love programming and always welcome new challenges.
                   I want to  learn new technologies and sharpen my current frontend and backend skills.
                   I like working with other people and I&apos;`m open to new ideas.
@@ -102,10 +101,10 @@ export default function Home() {
           <Experience />
 
 
-          <div className=" w-full">
+          <div id="work" className=" w-full !z-0">
             <div className="flex items-center gap-14">
               <p className={`${ultra.className} text-[3rem] lg:text-[4rem] gradientText`} >My Projects</p>
-              <button onClick={() => setListProjectsPattern(listProjectsPattern + 1)} className="flex items-center  select-none rounded-lg bg-purple-100 py-1 md:py-2 px-2.5 md:px-5 text-center  text-xs md:text-sm font-bold uppercase text-purple-600 shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40">Switch template</button>
+              <button onClick={() => setListProjectsPattern(listProjectsPattern + 1)} className="flex items-center  select-none rounded-lg bg-purple-100 py-1 md:py-2 px-2.5 md:px-5 text-center  text-[0.5rem] md:text-[0.8rem] xl:text-[1rem] font-bold uppercase text-purple-600 shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40">Switch template</button>
             </div>
 
             {
