@@ -2,6 +2,7 @@
 import { Ultra } from "next/font/google";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+
 interface ButtonProps {
     text: string;
     path : string;
@@ -55,7 +56,7 @@ export default function Header() {
     }, []);
 
     return (
-        <div ref={navbarRef} id='navbar' className='fixed top-0 w-full min-h-[100px] py-5 text-white flex justify-center items-center transition-all duration-300 backdrop-blur-[10px] bg-[#531068] bg-opacity-10' style={{zIndex : "99999"}}>
+        <div ref={navbarRef} id='navbar' className='fixed top-0 w-full min-h-[100px] py-5 text-white flex justify-center items-center transition-all duration-300 backdrop-blur-[10px]' style={{zIndex : "99999"}}>
             <p className={`${ultra.className} text-3xl absolute left-10`}>Iacob Oliver</p>
 
             <div id='buttons' className='hidden md:grid grid-cols-3 justify-items-center text-xl font-bold w-[30rem]'>
