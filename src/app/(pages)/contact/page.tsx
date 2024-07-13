@@ -60,7 +60,7 @@ export default function Contact() {
       setAlertMessage("Email sent successfully")
       setAlertColor("bg-purple-400");
       setShowAlert(true)
-      
+
 
       emailjs.send("service_ighq0xm", "template_dtvzk2q", params, "lPKTLTnGlEiMEhPGF").then(() => {
         setAlertMessage("Email sent successfully")
@@ -78,66 +78,66 @@ export default function Contact() {
   return (
     <div className='min-w-screen min-h-screen bg-black flex flex-col items-center justify-center'>
       <SlideLoading />
-      <Header/>
 
       {loadContent &&
-       <div className='flex flex-col items-center'>
-      <div className='bg-black w-screen h-screen  py-20'>
-      <Alert message={alertMessage} show={showAlert} setShow={setShowAlert} color={alertColor}/>
+        <div className='flex flex-col items-center'>
+          <div className='flex justify-center items-center bg-black w-screen h-screen pt-[120px] pb-20'>
+            <Header />
 
-      <div
-        className="w-[25rem] h-fit   mx-auto relative overflow-hidden  bg-gray-800 p-8 rounded-lg shadow-md before:w-24 before:h-24 before:absolute before:bg-purple-600 before:rounded-full before:-z-10 before:blur-2xl after:w-32 after:h-32 after:absolute after:bg-sky-400 after:rounded-full after:-z-10 after:blur-xl after:top-24 after:-right-12"
-      >
-        <h2 className="text-3xl font-bold  gradientText mb-8">Let&apos;s get in touch!</h2>
+            <Alert message={alertMessage} show={showAlert} setShow={setShowAlert} color={alertColor} />
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-300"
-          >Full Name</label >
-          <input
-            className="mt-1 p-2 w-full bg-gray-700 border border-gray-600 rounded-md text-white"
-            type="text"
-            ref={fullNameRef}
-            id="fullName"
-            name="fullName"
-          />
-        </div>
+            <div className="w-[25rem] h-fit relative overflow-hidden  bg-gray-800 p-8 rounded-lg shadow-md before:w-24 before:h-24 before:absolute before:bg-purple-600 before:rounded-full before:-z-10 before:blur-2xl after:w-32 after:h-32 after:absolute after:bg-sky-400 after:rounded-full after:-z-10 after:blur-xl after:top-24 after:-right-12">
+              <h2 className="text-3xl font-bold  gradientText mb-8">Let&apos;s get in touch!</h2>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-300"
-          >Email Address</label>
-          <input
-            className="mt-1 p-2 w-full bg-gray-700 border border-gray-600 rounded-md text-white"
-            name="email"
-            id="email"
-            type="email"
-            ref={clientEmailRef}
-          />
-        </div>
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-300"
+                >Full Name</label >
+                <input
+                  className="mt-1 p-2 w-full bg-gray-700 border border-gray-600 rounded-md text-white"
+                  type="text"
+                  ref={fullNameRef}
+                  id="fullName"
+                  name="fullName"
+                />
+              </div>
 
-        <div className="mb-4">
-          <label className="block text-sm font-medium text-gray-300" >Message</label>
-          <textarea
-            className="mt-1 p-2 w-full bg-gray-700 border border-gray-600 rounded-md text-white"
-            rows={3}
-            name="message"
-            id="message"
-            ref={messageRef}
-          ></textarea>
-        </div>
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-300"
+                >Email Address</label>
+                <input
+                  className="mt-1 p-2 w-full bg-gray-700 border border-gray-600 rounded-md text-white"
+                  name="email"
+                  id="email"
+                  type="email"
+                  ref={clientEmailRef}
+                />
+              </div>
 
-        <div className="flex justify-around mt-5">
-          <a data-ripple-light="true" href="/" className="select-none rounded-lg bg-purple-100 py-4 px-7 text-center align-middle text-base font-bold uppercase text-purple-600 shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-            Back
-          </a>
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-300" >Message</label>
+                <textarea
+                  className="mt-1 p-2 w-full bg-gray-700 border border-gray-600 rounded-md text-white"
+                  rows={3}
+                  name="message"
+                  id="message"
+                  ref={messageRef}
+                ></textarea>
+              </div>
 
-          <a data-ripple-light="true" onClick={sendMail} className="select-none rounded-lg bg-purple-100 py-4 px-7 text-center align-middle text-base font-bold uppercase text-purple-600 shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-            Send
-          </a>
-        </div>
-      </div>
+              <div className="flex justify-around mt-5">
+                <a data-ripple-light="true" href="/" className="select-none rounded-lg bg-purple-100 py-4 px-7 text-center align-middle text-base font-bold uppercase text-purple-600 shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                  Back
+                </a>
 
-      </div>
-       <Footer /> </div> }
+                <a data-ripple-light="true" onClick={sendMail} className="select-none rounded-lg bg-purple-100 py-4 px-7 text-center align-middle text-base font-bold uppercase text-purple-600 shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
+                  Send
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <Footer />
+        </div>}
     </div>
 
   )

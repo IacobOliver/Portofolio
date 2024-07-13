@@ -42,11 +42,9 @@ export default function Header() {
                 let scrollTop =  document.documentElement.scrollTop;
 
                 if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
-                    console.log("hide")
                     navbar.style.transform = 'translateY(-100%)'; // Hide navbar
                 } else {
                     navbar.style.transform = 'translateY(0)'; // Show navbar
-                    console.log("show")
                 }
                 lastScrollTop = scrollTop;
             });
@@ -56,11 +54,11 @@ export default function Header() {
     }, []);
 
     return (
-        <div ref={navbarRef} id='navbar' className='fixed top-0 w-full min-h-[100px] py-5 text-white flex justify-center items-center transition-all duration-300 backdrop-blur-[10px]' style={{zIndex : "99999"}}>
-            <p className={`${ultra.className} text-3xl absolute left-10`}>Iacob Oliver</p>
+        <div ref={navbarRef} id='navbar' className='fixed top-0 w-full min-h-[100px] py-5 text-white flex justify-center items-center transition-all duration-300 backdrop-blur-[10px] z-40' >
+            <a href="/" title="home" className={`${ultra.className} text-3xl absolute left-10`}>Iacob Oliver</a>
 
             <div id='buttons' className='hidden md:grid grid-cols-3 justify-items-center text-xl font-bold w-[30rem]'>
-                <Button1 path="/" text={"Home"} />
+                <Button1 path="/contact" text={"Contact"} />
                 <Button1 path="/#about_me" text={"About"} />
                 <Button1 path="/#work" text={"Work"} />
             </div>

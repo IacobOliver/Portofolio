@@ -49,7 +49,7 @@ export default function SlideLoading() {
       )
     }
   return (
-    <div ref={loader} className={"loader z-10 absolute top-0 left-0 h-screen w-screen"}>
+    <div ref={loader} className={"loader z-50 absolute top-0 left-0 h-screen w-screen"}>
         <svg>
           <path ref={path}></path>
         </svg>

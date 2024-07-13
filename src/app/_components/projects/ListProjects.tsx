@@ -3,6 +3,7 @@ import { projects } from '@/app/_utils/ProjectData'
 import { Lora, Ultra } from 'next/font/google'
 import React from 'react'
 import ProjectCard from './ProjectCard'
+import ProjectCardV3 from './ProjectCardV3'
 
 const lora = Lora({
     weight: '400',
@@ -17,9 +18,9 @@ const lora = Lora({
 export default function ListProjects() {
   return (
     <div className=' w-full mb-20 mt-14'>
-      <div className={`${lora.className} grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center  w-full mt-16 gap-14`}>
+      <div className={`${lora.className} grid grid-cols-1 lg:grid-cols-2 justify-items-stretch  w-full mt-16 gap-14`}>
         {
-            projects.map((project, index) => <ProjectCard key={index} project={project} />)
+            projects.map((project, index) => <ProjectCardV3 key={index} project={project} />)
         }
       </div>
     </div>

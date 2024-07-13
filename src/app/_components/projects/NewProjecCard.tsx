@@ -27,7 +27,7 @@ export default function NewProjectCard({project} : {project : any}) {
         <a className={`border-t-[2px] border-[#f0b3ff] py-10 max-h-[200px] cursor-pointer w-full flex justify-center  items-center text-3xl lg:text-5xl ${ultra.className}`} 
              onMouseEnter={() => {setIsActive(true)}} 
              onMouseLeave={() => {setIsActive(false)}}
-             href={`project/${project.slug}`}
+             href={project.slug}
         >
             <p className='mr-1'>{name.split(" ")[0]}</p>
             <motion.div className="" variants={anim} animate={isActive ? "open" : "closed"}>
