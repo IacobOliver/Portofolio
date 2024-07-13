@@ -37,7 +37,7 @@ export default function AboutMe() {
     ]
 
     const skills = ["Java"," JavaScript", "TypeScript", "Php",
-    "React", "Angular","Laravel", "PostgreSql", "MongoDB", 
+    "React", "Angular","Laravel", "PostgreSql", "MySQL", "MongoDB", 
       "SpringBoot" ,"Express", "Node" ,"HTML ","CSS",
       'Tailwind', "Bootstrap", "AWS"]
 
