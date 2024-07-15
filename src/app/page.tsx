@@ -26,32 +26,16 @@ const ultra = Ultra({
 
 
 export default function Home() {
-  const [showAuroraBackground, setShowAuroraBackground] = useState(false);
+  const [showAuroraBackground, setShowAuroraBackground] = useState(true);
   const [showAlert, setShowAlert] = useState(false)
   const [listProjectsPattern, setListProjectsPattern] = useState(0);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setShowAlert(true)
-    }, 2000)
-    setTimeout(() => {
-      setShowAlert(false)
-    }, 5000)
-
-    // Delay the showing of the AuroraBackground component
-    const timer = setTimeout(() => {
-      setShowAuroraBackground(true);
-    }, 300); // Adjust the delay time as needed
-
-    // Cleanup function to clear the timer if component unmounts or changes
-    return () => clearTimeout(timer);
-  }, []);
+  
 
   return (
-    <main className="flex h-screen w-screen flex-col items-center justify-between bg-black   ">
+    <main className="flex h-screen w-screen flex-col items-center justify-between bg-black relative  ">
       <SlideLoading />
 
-      {showAuroraBackground &&
         <div className="bg-black w-screen h-fit flex flex-col items-center px-8 sm:px-20">
           <AuroraBackground showRadialGradient={true} className="w-screen pt-[120px] px-8 sm:px-20 z-10 rounded-b-[2rem] shadow-xl shadow-[#1c1c1f]">
             <Header />
@@ -117,7 +101,7 @@ export default function Home() {
 
           <Alert message="This project is still in development!" show={showAlert} setShow={setShowAlert} color="bg-red-500" />
         </div>
-      }
+      
 
     </main>
   );

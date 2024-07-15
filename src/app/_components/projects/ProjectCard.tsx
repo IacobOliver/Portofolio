@@ -40,7 +40,6 @@ export default function ProjectCard({ project }: { project: Project }) {
     }
 
     useEffect(() =>{
-        console.log(window.innerWidth)
         if(window.innerWidth < 768 ){
             setHover(true)
         }

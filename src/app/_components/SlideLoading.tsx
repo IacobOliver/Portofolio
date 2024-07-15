@@ -12,6 +12,7 @@ export default function SlideLoading() {
       setPath(initialCurve);
       setTimeout( () => {
         requestAnimationFrame(animate)
+        loader.current?.classList.add("bg-transparent")
       }, 500)
     }, [])
   
@@ -49,7 +50,7 @@ export default function SlideLoading() {
       )
     }
   return (
-    <div ref={loader} className={"loader z-50 absolute top-0 left-0 h-screen w-screen"}>
+    <div ref={loader} className={"loader !z-50  bg-black"}>
         <svg>
           <path ref={path}></path>
         </svg>

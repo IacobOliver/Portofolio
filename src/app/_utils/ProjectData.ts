@@ -17,9 +17,10 @@ export let projects: Array<Project> = [
       name: "Clean Code Academy",
       slug: "clean-code-academy",
       description: "A learning platform made for CleanCode company still in development, for the new people that enter it to learn and gather experience in the world of programming. Frontend is build with JavaScript and React framework, Tailwind for styling and deploy on CPanel, Java and SpringBoot for backend, SpringSecurity for user authentication and deploy on AWS EC2. One the home page are presented the learning modules and the implemented katas of the day, selected by the mentors. The modules consists of weeks who have lessons that redirect on the github project that needs to be done. The project it's pretty complex so if you want to know more about it, let's get in touch !",
-      images: ["/images/projects/CleanCodeAcademy/cleancode1.jpg",
-         "/images/projects/CleanCodeAcademy/cleancode2.jpg",
+      images: [
          "/images/projects/CleanCodeAcademy/cleancode3.jpg",
+         "/images/projects/CleanCodeAcademy/cleancode1.jpg",
+         "/images/projects/CleanCodeAcademy/cleancode2.jpg",
          "/images/projects/CleanCodeAcademy/cleancode4.jpg",
          "/images/projects/CleanCodeAcademy/cleancode5.jpg",
          "/images/projects/CleanCodeAcademy/cleancode6.jpg",
@@ -28,7 +29,8 @@ export let projects: Array<Project> = [
          "React", "PostgreSql",
          "SpringBoot", "Node", "HTML ", "CSS",
          'Tailwind', "AWS"],
-      gitHubLink: "https://github.com/CleanCodeRo/ELearningPlatform_Frontend",
+      // gitHubLink: "https://github.com/CleanCodeRo/ELearningPlatform_Frontend",
+      gitHubLink: "#",
       deployLink: "https://quest.cleancode.ro/"
    },
    {

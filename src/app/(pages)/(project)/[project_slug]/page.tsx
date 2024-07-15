@@ -7,6 +7,8 @@ import { Lora, Ultra } from 'next/font/google'
 import Image from 'next/image'
 import { IconButton } from '@material-tailwind/react'
 import Footer from '@/app/_components/Footer'
+import { useRouter } from 'next/navigation'
+import SlideLoading from '@/app/_components/SlideLoading'
 
 
 const lora = Lora({
@@ -20,12 +22,14 @@ const ultra = Ultra({
 })
 
 export default function VisitProject({ params }: { params: any }) {
+  const router = useRouter()
   let project = projects.filter(project => project.slug == params.project_slug)[0]
 
   //console.log(params)
   return (
     <div className={`flex flex-col items-center min-h-screen w-screen gap-20 bg-black text-purple-100 ${lora.className}  px-8 sm:px-20`}>
       <Header />
+      <SlideLoading/>
       <h1 className={`text-[4rem] mb-10 pt-[120px] text-center  ${ultra.className} `}>{project.name}</h1>
 
       <div id="carrouselAndDescription" className='min-w-full flex flex-col items-center mt-10 '>
@@ -113,7 +117,7 @@ export default function VisitProject({ params }: { params: any }) {
         }
 
 
-        <a className="select-none rounded-lg bg-purple-100 py-3 px-6 text-center align-middle text-xl tracking-wider font-bold uppercase text-purple-600 shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" href="/">Back</a>
+        <button onClick={() => window.history.back()} className="select-none rounded-lg bg-purple-100 py-3 px-6 text-center align-middle text-xl tracking-wider font-bold uppercase text-purple-600 shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" >Back</button>
 
       </div>
 
