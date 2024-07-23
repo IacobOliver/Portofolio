@@ -16,7 +16,7 @@ const ultra = Ultra({
 export default function NewListProjects() {
 
   return (
-    <main className="h-auto w-full  flex flex-col  text-purple-100">
+    <main className="h-auto w-full grid grid-cols-1 lg:grid-cols-2  text-purple-100">
           {
             projects.map( (project, index) => {
               return <NewProjectCard key={index} project={project}/>

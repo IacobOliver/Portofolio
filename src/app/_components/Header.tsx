@@ -58,9 +58,9 @@ export default function Header() {
             <a href="/" title="home" className={`${ultra.className} text-3xl absolute left-10`}>Iacob Oliver</a>
 
             <div id='buttons' className='hidden md:grid grid-cols-3 justify-items-center text-xl font-bold w-[30rem]'>
-                <Button1 path="/contact" text={"Contact"} />
+                <Button1 path="/#work" text={"Projects"} />
                 <Button1 path="/#about_me" text={"About"} />
-                <Button1 path="/#work" text={"Work"} />
+                <Button1 path="/contact" text={"Contact"} />
             </div>
 
             <a href="https://github.com/IacobOliver" target="_blank" className="flex w-fit cursor-pointer absolute right-10">

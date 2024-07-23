@@ -20,7 +20,7 @@ export default function Experience() {
             <div id="experienceContent" className=" bg-black text-purple-100 pb-8 w-full mx-auto flex flex-col items-start lg:flex-row mb-12 ">
                 <div id="welcomeText" className="flex flex-col w-full sticky lg:top-36 lg:w-1/4 mt-2 md:mt-12 mb-14 lg:mb-0 pr-8">
                     <p className="ml-2 text-purple-300 uppercase tracking-loose">Working Process</p>
-                    <p className={`text-[1.8rem] md:text-[2rem]   my-4 tracking-wide ${ultra.className}`}>Welcome to my developer journey</p>
+<p className={`text-[1.8rem] md:text-[2rem]   my-4 tracking-wide ${ultra.className}`}>Welcome to my developer journey</p>
                     <p className="text-[0.7rem] md:text-[1.1rem] xl:text-[1.3rem] text-purple-100 mb-4">
                         Excited to share my coding journey with you!
                         Let&apos;s explore together as we dive into the fascinating world of programming.

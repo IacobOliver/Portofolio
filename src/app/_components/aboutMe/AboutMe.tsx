@@ -32,8 +32,8 @@ export default function AboutMe() {
     const phrases = [
     "Strong problem - solving and analytical skills, experience with web application development and I have solid",
     "understanding of object oriented programming.",
-    "Experience with relational, non-relational databases and familiar with cloud platforms.I like working with",
-    "other people and I consider myself good at debuging  and finding efficient solutions",
+    "Experience with relational, non-relational databases and familiar with cloud platforms.I like pair ",
+    "programming and I consider myself good at debuging  and finding efficient solutions",
     ]
 
     const skills = ["Java"," JavaScript", "TypeScript", "Php",

@@ -24,7 +24,7 @@ export default function NewProjectCard({project} : {project : any}) {
     const { name, images } = project;
 
     return (
-        <a className={`border-t-[2px] border-[#f0b3ff] py-10 max-h-[200px] cursor-pointer w-full flex justify-center  items-center text-3xl lg:text-5xl ${ultra.className}`} 
+        <a className={`border-t-[2px] border-[#f0b3ff] py-10 max-h-[200px] cursor-pointer w-full flex justify-center  items-center text-2xl lg:text-4xl ${ultra.className}`} 
              onMouseEnter={() => {setIsActive(true)}} 
              onMouseLeave={() => {setIsActive(false)}}
              href={project.slug}
