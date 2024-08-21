@@ -10,8 +10,7 @@ import Footer from '@/app/_components/Footer'
 import SlideLoading from '@/app/_components/SlideLoading'
 
 import { useScroll, useTransform, motion } from "framer-motion"
-import TextParalax from './TextParalax'
-
+import TextParallax from './TextParalax'
 
 const lora = Lora({
   weight: '400',
@@ -181,7 +180,7 @@ export default function VisitProject({ params }: { params: any }) {
       <Header />
       <SlideLoading />
       <Intro />
-      <TextParalax text={project.name.replace(/\s+/g, '')} />
+      <TextParallax text={project.name.replace(/\s+/g, '')} />
       <Description />
       <Footer />
     </main>

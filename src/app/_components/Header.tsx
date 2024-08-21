@@ -21,7 +21,7 @@ export default function Header() {
                 <div
                     className="absolute transitiona-all duration-1000 opacity-70 -inset-px group-hover:bg-gradient-to-r from-gray-500 via-gray-400 to-gray-300 rounded-full blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-300">
                 </div>
-                <a href={path} title="Get quote now"
+                <a href={path} title={text}
                     className="relative inline-flex items-center py-3 justify-center  hover:py-0 font-bold  transition-all duration-200  rounded-full group-hover:text-[2rem]  "
                     role="button">{text}
                 </a>
