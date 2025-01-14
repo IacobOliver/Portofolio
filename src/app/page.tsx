@@ -113,7 +113,7 @@ export default function Home() {
                   <a href="\files\OliverResume.pdf" download className="group flex flex-col items-center justify-center w-full py-8 xs:py-20 text-sm xs:text-base border border-[#171717] rounded-lg hover:bg-[#171717] hover:shadow-lg hover:shadow-[#171717] hover:scale-105 transition-transform duration-300">
                     {/* <Image width={80} height={80} alt="pfpExtended" className="fill-[#171717]" src="/downloadIcon.svg" draggable={false} /> */}
                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        className="w-[60px] xs:w-[90px] h-[60px] xs:h-[90px]  group overflow-visible mb-3" >
+                      className="w-[60px] xs:w-[90px] h-[60px] xs:h-[90px]  group overflow-visible mb-3" >
                       <defs>
                         <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
                           <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="white" />
@@ -127,7 +127,7 @@ export default function Home() {
 
                   <a
                     target="_blank"
-                    href="https://docs.google.com/document/d/1_1xwnS3hPM0RGDBVmUnh51w4b8_Q5lYbjDCs0IGm3cs/edit?usp=sharing"
+                    href="https://docs.google.com/document/d/1o5YZtQ2SXnw1dM-6xYOAR2mVNeJ3ohHPGD0dj2s-PhY/edit?tab=t.0"
                     className="group flex flex-col items-center justify-center w-full py-8 xs:py-20 text-sm xs:text-base border border-[#171717] rounded-lg hover:bg-[#171717] hover:shadow-lg hover:shadow-[#171717]   hover:scale-105 transition-transform duration-300">
                     <Image width={80} height={80} alt="pfpExtended" className="w-[60px] xs:w-[90px] h-[60px] xs:h-[90px] mb-3 group-hover:scale-125 group-hover:mb-5 transition-transform duration-300" src="/images/icons/docsIcon.png" draggable={false} />
                     <p>Read Online</p>
