@@ -69,6 +69,15 @@ export let projects: Array<Project> = [
       deployLink: "#"
    },
    {
+      name: "Shape Storm",
+      slug: "shape-storm",
+      description: "This is a mini-game with falling shapes, created as a test for an interview. The project is built using JavaScript with an object-oriented structure, following design patterns and best practices. It includes various controls, such as adjusting gravity or the number of shapes per second, along with some other game statistics. Feel free to give it a try and leave me a review! It's also available on mobile!",
+      images: ["/images/projects/PIXIGame/Poza1.png"],
+      skills: ["PIXI.js", " JavaScript", "HTML ", "CSS"],
+      gitHubLink: "https://github.com/IacobOliver/PixiProjectJavaScript",
+      deployLink: "https://iacoboliver.github.io/PixiProjectJavaScript/"
+   },
+   {
       name: "Magic Recruiting",
       slug: "magic-recruiting",
       description: "Landing page for MagicHub company with recruiting role, the project is developed in plain css and html, I recived it this way I developed it this way. The project consists of multiple pages fully responsive like the rest of my projects in my portofolio, and will soon be live. When a register request is made is sent to a telegram bot to our company!",
