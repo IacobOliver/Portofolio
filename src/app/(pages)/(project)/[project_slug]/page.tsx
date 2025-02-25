@@ -49,7 +49,7 @@ export default function VisitProject({ params }: { params: any }) {
     const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"])
 
     return (
-      <div className='h-screen overflow-hidden pt-[120px] bg-black'>
+      <div className='h-fit sm:h-[50vh] md:h-[70vh] lg:h-screen overflow-hidden pt-[120px] bg-black'>
         <motion.div style={{ y }} className='relative h-full'>
           <Image className='!h-fit' src={project.images[0]} fill alt="image" />
         </motion.div>
@@ -60,9 +60,9 @@ export default function VisitProject({ params }: { params: any }) {
   const Description = () => {
 
     return (
-      <div className='grid grid-cols-5 gap-20  bg-black text-purple-100 pb-40 px-8 sm:px-20'>
+      <div className='grid grid-cols-1 lg:grid-cols-5 gap-10 md:gap-20  bg-black text-purple-100 pb-40 px-8 sm:px-20'>
 
-        <div id='col1' className='col-span-2 flex flex-col items-start justify-center'>
+        <div id='col1' className= 'col-span-1 lg:col-span-2 flex flex-col items-start justify-center order-2 w-full '>
           <p className={`mb-3 tracking-wide text-lg md:text-3xl ${ultra.className}`}>About the project</p>
           <p className={`text-[0.7rem] md:text-[1.1rem] xl:text-[1.3rem] leading-snug text-purple-100 ${lora.className}`}>
             {project.description}
@@ -82,7 +82,7 @@ export default function VisitProject({ params }: { params: any }) {
           </div>
         </div>
 
-        <div id='col2' className='flex flex-col col-span-3'>
+        <div id='col2' className='flex flex-col col-span-1 lg:col-span-3 lg:order-2'>
           <Carousel key={101} placeholder={""} className="rounded-xl w-full h-auto"
             loop={true}
             autoplay={true}

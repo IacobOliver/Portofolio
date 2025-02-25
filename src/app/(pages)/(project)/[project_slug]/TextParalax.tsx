@@ -37,7 +37,7 @@ export default function TextParallax({ text }: TextParallaxProps) {
         const translateX = useTransform(props.progress, [0, 1], [150 * direction, -150 * direction]);
 
         return (
-            <motion.div style={{ x: translateX, left: props.left }} className="relative flex whitespace-nowrap ">
+            <motion.div style={{ x: translateX, left: props.left }} className="relative flex whitespace-nowrap">
                 <Phrase text={text} /> 
                 <Phrase text={text} />
                 <Phrase text={text} />
@@ -48,7 +48,7 @@ export default function TextParallax({ text }: TextParallaxProps) {
 
     const Phrase = ({ text }: { text: string }) => {
         return (
-            <p className= {`text-[5rem] ${ultra.className} px-8 flex gap-5 items-center `}>
+            <p className= {`text-[1rem] sm:text-[2.5rem] md:text-[5rem] ${ultra.className} px-4 sm:px-8 flex gap-5 items-center `}>
               {text}
             </p>
         )
@@ -60,7 +60,7 @@ export default function TextParallax({ text }: TextParallaxProps) {
             <div ref={container}>
                 {scrollYProgress ? (
                     <>
-                        <Slide src={"/images/icons/github-mark-white.png"} left={"-40%"} progress={scrollYProgress} />
+                        <Slide  left={"-40%"} progress={scrollYProgress} />
                     </>
                 ) : null}
             </div>
