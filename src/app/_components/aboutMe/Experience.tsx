@@ -1,7 +1,7 @@
 import { Lora, Ultra } from "next/font/google";
 import Image from "next/image";
-import React, { useState } from "react";
-import { Modal, ModalBody, ModalContent, ModalFooter, ModalTrigger, useModal } from "../Modal";
+import React from "react";
+import { Modal, ModalBody, ModalContent, ModalFooter, ModalTrigger } from "../Modal";
 
 const lora = Lora({
     weight: '400',
@@ -38,19 +38,6 @@ const jobDetails: { [key: string]: JobDetails } = {
 };
 
 export default function Experience() {
-    const [selectedJob, setSelectedJob] = useState<string | null>(null);
-    const { setOpenModalId } = useModal();
-
-    const handleJobClick = (jobId: string) => {
-        setSelectedJob(jobId);
-        setOpenModalId('experienceModal');
-    };
-
-    const handleCloseModal = () => {
-        setSelectedJob(null);
-        setOpenModalId(null);
-    };
-
     const ReadMoreButton = () => (
         <div className="flex items-center gap-2 mt-6 group">
             <p className="text-purple-300 group-hover:text-purple-400 transition-colors">Click to read more</p>
@@ -97,15 +84,14 @@ export default function Experience() {
                                 <div className="order-1 w-5/12 px-1 py-4 text-right">
                                     <p className={`mb-3 text-base text-purple-300 ${lora.className}`}>December 2022 - Present,<br /> Full Stack Developer </p>
                                     <h4 className={`mb-3 tracking-wide text-lg md:text-3xl ${ultra.className}`}>Clean Code</h4>
-                                    <div 
-                                        onClick={() => handleJobClick('cleanCode')} 
-                                        className={`cursor-pointer text-[0.7rem] md:text-[1.1rem] xl:text-[1.3rem] leading-snug text-purple-100 ${lora.className} hover:text-purple-200`}
-                                    >
-                                        <p>I started learning the MERN stack and Java&apos;s OOP concepts from scratch.</p>
-                                        <div className="flex justify-end">
-                                            <ReadMoreButton />
+                                    <ModalTrigger id="cleanCodeModal">
+                                        <div className={`cursor-pointer text-[0.7rem] md:text-[1.1rem] xl:text-[1.3rem] leading-snug text-purple-100 ${lora.className} hover:text-purple-200`}>
+                                            <p>I started learning the MERN stack and Java&apos;s OOP concepts from scratch.</p>
+                                            <div className="flex justify-end">
+                                                <ReadMoreButton />
+                                            </div>
                                         </div>
-                                    </div>
+                                    </ModalTrigger>
                                 </div>
                                 <div className="flex items-center rounded-full h-1 w-[48%] bg-purple-600 absolute bottom-0 left-0">
                                     <div className="w-8 h-8 rounded-full bg-purple-600 absolute right-[-22px]"></div>
@@ -117,15 +103,14 @@ export default function Experience() {
                                 <div className="order-1  w-5/12 px-1 py-4 text-left">
                                     <p className="mb-3 text-base text-purple-300">April 2024 - Present,<br /> Full Stack Developer</p>
                                     <h4 className={`mb-3 font-bold text-lg md:text-3xl ${ultra.className}`}>Magic Hub</h4>
-                                    <div 
-                                        onClick={() => handleJobClick('magicHub')} 
-                                        className={`cursor-pointer text-[0.7rem] md:text-[1.1rem] xl:text-[1.3rem] leading-snug text-purple-100 ${lora.className} hover:text-purple-200`}
-                                    >
-                                        <p>At Magic Hub Romania, I work as a Full Stack Developer, focusing on maintaining and enhancing various websites.</p>
-                                        <div className="flex justify-start">
-                                            <ReadMoreButton />
+                                    <ModalTrigger id="magicHubModal">
+                                        <div className={`cursor-pointer text-[0.7rem] md:text-[1.1rem] xl:text-[1.3rem] leading-snug text-purple-100 ${lora.className} hover:text-purple-200`}>
+                                            <p>At Magic Hub Romania, I work as a Full Stack Developer, focusing on maintaining and enhancing various websites.</p>
+                                            <div className="flex justify-start">
+                                                <ReadMoreButton />
+                                            </div>
                                         </div>
-                                    </div>
+                                    </ModalTrigger>
                                 </div>
                                 <div className="h-1 rounded-full w-[48%] bg-purple-600 absolute bottom-0 right-10 flex items-center ">
                                     <div className="w-8 h-8 rounded-full bg-purple-600 absolute left-[-22px]"></div>
@@ -137,24 +122,41 @@ export default function Experience() {
                 </div>
             </div>
 
-            {/* Single Modal */}
-            <Modal id="experienceModal" className="text-white">
+            {/* Modals */}
+            <Modal id="cleanCodeModal" className="text-white">
                 <ModalBody>
                     <ModalContent>
                         <div className="p-4">
-                            {selectedJob && (
-                                <>
-                                    <h3 className={`${ultra.className} text-2xl mb-4`}>{jobDetails[selectedJob].title}</h3>
-                                    <p className={`${lora.className} text-[1rem] leading-relaxed whitespace-pre-line`}>
-                                        {jobDetails[selectedJob].description}
-                                    </p>
-                                </>
-                            )}
+                            <h3 className={`${ultra.className} text-2xl mb-4`}>{jobDetails.cleanCode.title}</h3>
+                            <p className={`${lora.className} text-[1rem] leading-relaxed whitespace-pre-line`}>
+                                {jobDetails.cleanCode.description}
+                            </p>
                         </div>
                     </ModalContent>
                     <ModalFooter>
                         <button 
-                            onClick={handleCloseModal} 
+                            onClick={() => document.getElementById('cleanCodeModal')?.click()}
+                            className="px-4 py-2 bg-purple-600 rounded-lg hover:bg-purple-700 transition-colors"
+                        >
+                            Close
+                        </button>
+                    </ModalFooter>
+                </ModalBody>
+            </Modal>
+
+            <Modal id="magicHubModal" className="text-white">
+                <ModalBody>
+                    <ModalContent>
+                        <div className="p-4">
+                            <h3 className={`${ultra.className} text-2xl mb-4`}>{jobDetails.magicHub.title}</h3>
+                            <p className={`${lora.className} text-[1rem] leading-relaxed whitespace-pre-line`}>
+                                {jobDetails.magicHub.description}
+                            </p>
+                        </div>
+                    </ModalContent>
+                    <ModalFooter>
+                        <button 
+                            onClick={() => document.getElementById('magicHubModal')?.click()}
                             className="px-4 py-2 bg-purple-600 rounded-lg hover:bg-purple-700 transition-colors"
                         >
                             Close
