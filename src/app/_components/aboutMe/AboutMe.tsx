@@ -36,7 +36,7 @@ export default function AboutMe() {
     "programming and I consider myself good at debuging  and finding efficient solutions",
     ]
 
-    const skills = ["Java"," JavaScript", "TypeScript", "Php",
+    const skills = ["Java"," JavaScript", "TypeScript", "Php", "Docker",
     "React", "Angular","Laravel", "PostgreSql", "MySQL", "MongoDB", 
       "SpringBoot" ,"Express", "Node" ,"HTML ","CSS",
       'Tailwind', "Bootstrap", "AWS"]

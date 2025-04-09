@@ -53,6 +53,21 @@ export let projects: Array<Project> = [
       deployLink: "https://magictattoo.ink/"
    },
    {
+      name: "Inner Concept Studio",
+      slug: "inner-concept-studio",
+      description: "This presentation page was created to showcase the incredible talent and hard work of two exceptional designers. It serves as a platform to highlight their creativity, dedication, and the unique vision behind their projects.",
+      images: ["/images/projects/innerConceptStudio/image1.jpg",
+      "/images/projects/innerConceptStudio/image2.jpg",
+      "/images/projects/innerConceptStudio/image3.jpg",
+      "/images/projects/innerConceptStudio/image4.jpg",
+      "/images/projects/innerConceptStudio/image5.jpg",],
+      skills: ["TypeScript",
+         "React", "Node", "ANTD" , "HTML ", "CSS",
+         'Tailwind'],
+      gitHubLink: "#",
+      deployLink: "https://innerconceptstudio.cleancode.ro/"
+   },
+   {
       name: "Anime Journey",
       slug: "anime-journey",
       description: "Dive into the world of anime, and find your favorite ones to chart your anime journey. This project is made with Java, JavaScript, React, SpringBoot, PostgreSQL and more others to give you a unique experience, discovering the best and the newest anime, with a score and reviews from other people for you to enjoy the best content ",
