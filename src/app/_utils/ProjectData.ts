@@ -14,6 +14,25 @@ export interface Project {
 
 export let projects: Array<Project> = [
    {
+      name: "Primăria Sector 2 București",
+      slug: "primăria_sector_2_bucurești",
+      description: "This project, funded by the European Union, aims to create a digital twin platform for Sector 2 of Bucharest. The platform will offer a detailed virtual map of the area, showing important features such as buildings, parks, churches, and other landmarks. One of the main goals is to monitor the environment in real time. The platform will track air quality and pollution levels, calculate CO₂ emissions, and generate future scenarios based on pollution trends. This will help city planners and residents make better decisions for a cleaner, healthier, and more sustainable Sector 2.",
+      images: [
+         "/images/projects/gis/gis5.jpg",
+         "/images/projects/gis/gis2.jpg",
+         "/images/projects/gis/gis3.jpg",
+         "/images/projects/gis/gis4.jpg",
+         "/images/projects/gis/gis1.jpg",
+         "/images/projects/gis/gis6.jpg",
+      ],
+      skills: ["Java", " TypeScript",
+         "React", "PostgreSql", "PostGis",
+         "SpringBoot", "Node", "HTML ", "CSS",
+         'Tailwind', "Docker", "Docker-Compose"],
+      gitHubLink: "#",
+      deployLink: "https://decarbonare.cleancodeit.com/"
+   },
+   {
       name: "Clean Code Academy",
       slug: "clean-code-academy",
       description: "A learning platform made for CleanCode company still in development, for the new people that enter it to learn and gather experience in the world of programming. Frontend is build with JavaScript and React framework, Tailwind for styling and deploy on CPanel, Java and SpringBoot for backend, SpringSecurity for user authentication and deploy on AWS EC2. One the home page are presented the learning modules and the implemented katas of the day, selected by the mentors. The modules consists of weeks who have lessons that redirect on the github project that needs to be done. The project it's pretty complex so if you want to know more about it, let's get in touch !",
@@ -125,17 +144,5 @@ export let projects: Array<Project> = [
       gitHubLink: "https://github.com/IacobOliver/RestaurantMania",
       deployLink: "#"
    },
-   {
-      name: "Employee Mandness",
-      slug: "employee-mandness",
-      description: "This is a solo project where I learned to use advanced MERN(Mongo, Express.js, React, Node.js) stack operations and routing. The project focuses on managing employee data for a company, allowing a wide variety of operations on its database",
-      images: ["/images/projects/employeeMadness/image-1.png"],
-      skills: ["JavaScript",
-         "React", "MongoDB",
-         "Express", "Node", "HTML ", "CSS",
-         'Tailwind'],
-      gitHubLink: "https://github.com/IacobOliver/PublicEmployeeMadness",
-      deployLink: "#"
-   }
 ]
 
