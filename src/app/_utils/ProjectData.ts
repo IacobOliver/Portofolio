@@ -14,9 +14,27 @@ export interface Project {
 
 export let projects: Array<Project> = [
    {
+      name: "Project Management",
+      slug: "project_management",
+      description: "This is a project management platform that's currently a work in progress. It’s designed to help teams stay organized and manage their work efficiently. Users can create projects, break them down into work packages and tasks, and invite team members to collaborate. The platform supports different user roles and includes a time-tracking (clocking) system with built-in checks to ensure legal working hour limits are respected. When a user is added to a project, the platform helps set up their tariff and automatically generates a contract. It also provides tools to help users plan and optimize their project budget.",
+      images: [
+         "/images/projects/pm/pm2.jpg",
+         "/images/projects/pm/pm5.jpg",
+         "/images/projects/pm/pm3.jpg",
+         "/images/projects/pm/pm4.jpg",
+         "/images/projects/pm/pm1.jpg",
+      ],
+      skills: ["Java", " TypeScript",
+         "React", "PostgreSql",
+         "SpringBoot", "Node", "HTML ", "CSS",
+         'Tailwind', "Docker", "Docker-Compose"],
+      gitHubLink: "#",
+      deployLink: "https://pm.cleancode.ro/"
+   },
+   {
       name: "Primăria Sector 2 București",
       slug: "primăria_sector_2_bucurești",
-      description: "This project, funded by the European Union, aims to create a digital twin platform for Sector 2 of Bucharest. The platform will offer a detailed virtual map of the area, showing important features such as buildings, parks, churches, and other landmarks. One of the main goals is to monitor the environment in real time. The platform will track air quality and pollution levels, calculate CO₂ emissions, and generate future scenarios based on pollution trends. This will help city planners and residents make better decisions for a cleaner, healthier, and more sustainable Sector 2.",
+      description: "This project is work in progress, funded by the European Union, aims to create a digital twin platform for Sector 2 of Bucharest. The platform will offer a detailed virtual map of the area, showing important features such as buildings, parks, churches, and other landmarks. One of the main goals is to monitor the environment in real time. The platform will track air quality and pollution levels, calculate CO₂ emissions, and generate future scenarios based on pollution trends. This will help city planners and residents make better decisions for a cleaner, healthier, and more sustainable Sector 2.",
       images: [
          "/images/projects/gis/gis5.jpg",
          "/images/projects/gis/gis2.jpg",
@@ -48,7 +66,6 @@ export let projects: Array<Project> = [
          "React", "PostgreSql",
          "SpringBoot", "Node", "HTML ", "CSS",
          'Tailwind', "AWS"],
-      // gitHubLink: "https://github.com/CleanCodeRo/ELearningPlatform_Frontend",
       gitHubLink: "#",
       deployLink: "https://quest.cleancode.ro/"
    },
