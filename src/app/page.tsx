@@ -127,7 +127,7 @@ export default function Home() {
 
                   <a
                     target="_blank"
-                    href="https://docs.google.com/document/d/1o5YZtQ2SXnw1dM-6xYOAR2mVNeJ3ohHPGD0dj2s-PhY/edit?tab=t.0"
+                    href="https://docs.google.com/document/d/1AU4migDt7NUWhejRJpFVtF8OKFec4C68VxdaQfJ6nKw/edit?usp=sharing"
                     className="group flex flex-col items-center justify-center w-full py-8 xs:py-20 text-sm xs:text-base border border-[#171717] rounded-lg hover:bg-[#171717] hover:shadow-lg hover:shadow-[#171717]   hover:scale-105 transition-transform duration-300">
                     <Image width={80} height={80} alt="pfpExtended" className="w-[60px] xs:w-[90px] h-[60px] xs:h-[90px] mb-3 group-hover:scale-125 group-hover:mb-5 transition-transform duration-300" src="/images/icons/docsIcon.png" draggable={false} />
                     <p>Read Online</p>
