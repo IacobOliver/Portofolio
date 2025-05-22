@@ -32,8 +32,8 @@ export let projects: Array<Project> = [
       deployLink: "https://pm.cleancode.ro/"
    },
    {
-      name: "Primăria Sector 2 București",
-      slug: "primăria_sector_2_bucurești",
+      name: "Primaria Sector 2 Bucuresti",
+      slug: "primaria_sector_2_bucuresti",
       description: "This project is work in progress, funded by the European Union, aims to create a digital twin platform for Sector 2 of Bucharest. The platform will offer a detailed virtual map of the area, showing important features such as buildings, parks, churches, and other landmarks. One of the main goals is to monitor the environment in real time. The platform will track air quality and pollution levels, calculate CO₂ emissions, and generate future scenarios based on pollution trends. This will help city planners and residents make better decisions for a cleaner, healthier, and more sustainable Sector 2.",
       images: [
          "/images/projects/gis/gis5.jpg",
