@@ -101,7 +101,7 @@ export default function Experience() {
                             <div className="relative mb-3 flex justify-between items-center w-full right-timeline">
                                 <div className="order-1 w-5/12"></div>
                                 <div className="order-1  w-5/12 px-1 py-4 text-left">
-                                    <p className="mb-3 text-base text-purple-300">April 2024 - Present,<br /> Full Stack Developer</p>
+                                    <p className="mb-3 text-base text-purple-300">April 2024 - July 2024,<br /> Full Stack Developer</p>
                                     <h4 className={`mb-3 font-bold text-lg md:text-3xl ${ultra.className}`}>Magic Hub</h4>
                                     <ModalTrigger id="magicHubModal">
                                         <div className={`cursor-pointer text-[0.7rem] md:text-[1.1rem] xl:text-[1.3rem] leading-snug text-purple-100 ${lora.className} hover:text-purple-200`}>
